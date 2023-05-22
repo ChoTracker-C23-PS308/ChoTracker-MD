@@ -7,6 +7,7 @@
     tools:context=".ui.on_boarding.OnBoardingActivity">
 
     <include
+        android:id="@+id/layout_on_boarding"
         layout="@layout/layout_onboarding" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
