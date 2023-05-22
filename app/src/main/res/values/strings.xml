@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">ChoTracker</string>
+    <string name="agree_to_terms">By logging in, you agree to our <font color="#0E8388">Terms of service</font> and <font color="#0E8388">Privacy policy</font>.</string>
+    <string name="continue_login">Continue Login</string>
+    <string name="desc_menu_1">Taking care of your body is a powerful investment in your future self.</string>
+    <string name="desc_menu_2">A healthy lifestyle is not a short-term goal, it\'s a lifelong commitment.</string>
+    <string name="desc_menu_3">Your body is a temple, keep it pure and clean for the soul to reside in.</string>
+    <string name="desc_menu_4">Don\'t wait for illness to strike, make your health a priority today.</string>
+    <string name="tagline">Track your cholesterol level through your eyes</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email_error">Please input valid email</string>
+    <string name="password_error">Password must be at least 8 characters</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="or">OR</string>
+    <string name="already_have_account">Already have an account?<font color="#0E8388"> Login.</font></string>
+    <string name="do_not_have_account">Don\'t have an account yet?<font color="#0E8388"> Sign Up.</font></string>
+    <string name="ads_title">Upgrade to Premium</string>
+    <string name="ads_desc">Consult with our professional doctors and get the best price</string>
+    <string name="choose_plan">CHOOSE THIS PLAN</string>
+    <string name="one">1</string>
+    <string name="six">6</string>
+    <string name="twelve">12</string>
+    <string name="month">MONTH</string>
+    <string name="price1">Rp. 50.000</string>
+    <string name="price2">Rp. 250.000</string>
+    <string name="price3">Rp. 500.000</string>
+    <string name="date_template">Agu 17, 1945</string>
+    <string name="total_cholesterol">Total Cholesterol :</string>
+    <string name="cholesterol_level">Cholesterol Level :</string>
+    <string name="rate_cholesterol_template">\> 240</string>
+    <string name="rate_cholesterol_level">High</string>
+
 </resources>
