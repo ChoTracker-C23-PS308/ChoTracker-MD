@@ -111,7 +111,7 @@
         <Constraint
             android:id="@+id/logoMenu2"
             android:layout_width="0dp"
-            android:layout_height="250dp"
+            android:layout_height="230dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintVertical_bias="0.35"
             motion:layout_constraintTop_toTopOf="parent"

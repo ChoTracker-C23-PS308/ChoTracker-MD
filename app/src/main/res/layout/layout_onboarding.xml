@@ -51,7 +51,7 @@
     <ImageView
         android:id="@+id/logoMenu2"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
         android:src="@drawable/logo_menu_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
@@ -62,7 +62,7 @@
         android:id="@+id/descMenu2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center_horizontal"
         android:text="@string/desc_menu_2"
