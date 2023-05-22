@@ -1,26 +1,26 @@
-package com.capstone.chotracker.ui.login
+package com.capstone.chotracker.ui.signup
 
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.KeyEvent
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.capstone.chotracker.databinding.ActivityLoginBinding
-import com.capstone.chotracker.ui.signup.SignupActivity
+import com.capstone.chotracker.databinding.ActivitySignupBinding
+import com.capstone.chotracker.ui.login.LoginActivity
 
-class LoginActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: ActivitySignupBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupView()
-        navigateToSignUp()
+        buttonSignupHandler()
+        alreadyHaveAccount()
     }
 
     private fun setupView() {
@@ -36,19 +36,21 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    private fun navigateToSignUp() {
-        binding.layoutLogin.tvDoNotHaveAccount.setOnClickListener {
-            val intent = Intent(this@LoginActivity, SignupActivity::class.java)
-            startActivity(intent)
+    private fun buttonSignupHandler() {
+        binding.layoutSignup.signupButton.setOnClickListener {
+            navigateToLogin()
         }
     }
 
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            finishAffinity()
-            System.exit(0)
+    private fun alreadyHaveAccount() {
+        binding.layoutSignup.tvAlreadyHaveAccount.setOnClickListener {
+            navigateToLogin()
         }
-        return super.onKeyDown(keyCode, event)
     }
 
+    private fun navigateToLogin() {
+        val intent = Intent(this@SignupActivity, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 }
