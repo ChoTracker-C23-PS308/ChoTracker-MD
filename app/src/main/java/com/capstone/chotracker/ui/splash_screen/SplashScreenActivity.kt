@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.capstone.chotracker.MainActivity
 import com.capstone.chotracker.databinding.ActivitySplashScreenBinding
+import com.capstone.chotracker.ui.on_boarding.OnBoardingActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -27,7 +27,7 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun navigateTo() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, OnBoardingActivity::class.java)
         intentSplash(intent)
     }
 

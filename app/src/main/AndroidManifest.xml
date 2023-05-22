@@ -14,7 +14,10 @@
         android:theme="@style/Theme.ChoTracker"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.on_boarding.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.splash_screen.SplashScreenActivity"
