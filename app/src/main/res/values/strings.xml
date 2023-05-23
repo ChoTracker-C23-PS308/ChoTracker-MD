@@ -98,4 +98,19 @@ Lewis suffered a fractured skull and was one of dozens of nonviolent protesters 
     <string name="see_article">See all article</string>
 
 
+    <string name="consultation">Consultation</string>
+    <string name="myChochat">MyCho Bot</string>
+    <string name="cho_description">Hi, may i help you?</string>
+    <string name="lats_see">12:00 PM</string>
+    <string name="find_doctor">Find Doctor</string>
+    <string name="choose_doctor">Choose your doctor</string>
+    <string name="doctor1">Bintang Khadapi</string>
+    <string name="doctor2">Fadila Rahim</string>
+    <string name="premium_card_upgrade">Upgrade to </string>
+    <string name="premium_card">Upgrade to
+<font color="#FFD700">PREMIUM</font> and
+consult with us</string>
+    <string name="upgrade_now">upgrade</string>
+
+
 </resources>
