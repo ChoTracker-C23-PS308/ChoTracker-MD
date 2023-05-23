@@ -33,5 +33,24 @@
     <string name="cholesterol_level">Cholesterol Level :</string>
     <string name="rate_cholesterol_template">\> 240</string>
     <string name="rate_cholesterol_level">High</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="name_profile">Bintang Khadafi</string>
+    <string name="email_profile">bintang@gmail.com</string>
+    <string name="darkmode">Dark Mode</string>
+    <string name="language">language</string>
+    <string name="term_of_service">Term of Service</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="about_app">About App</string>
+    <string name="rate_app">Rate this App</string>
+    <string name="logout">Logout</string>
+    <string name="seting_profile">Setting</string>
+
+    <string name="home_nave">Home</string>
+    <string name="findkes_nav">Findkes</string>
+    <string name="chochat_nav">ChoChat</string>
+    <string name="profile_nav">Profile</string>
+
 
 </resources>

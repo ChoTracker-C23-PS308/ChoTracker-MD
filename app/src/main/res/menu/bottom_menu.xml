@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/home_nav"
+            android:title="@string/home_nave"
+            android:icon="@drawable/home_nav"/>
+
+        <item
+            android:id="@+id/findkes_nav"
+            android:title="@string/findkes_nav"
+            android:icon="@drawable/findkes_nav"/>
+
+        <item
+            android:id="@+id/capture_nav"
+            android:title="" />
+
+        <item
+            android:id="@+id/chochat_nav"
+            android:title="@string/chochat_nav"
+            android:icon="@drawable/chochat_nav"/>
+
+        <item
+            android:id="@+id/profil_nav"
+            android:title="@string/profile_nav"
+            android:icon="@drawable/profile_nav"/>
+</menu>
