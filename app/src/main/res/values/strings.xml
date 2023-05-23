@@ -112,5 +112,12 @@ Lewis suffered a fractured skull and was one of dozens of nonviolent protesters 
 consult with us</string>
     <string name="upgrade_now">upgrade</string>
 
+    <string name="chat_with_expert">Chat with expert</string>
+    <string name="choose_a_doctor">Choose your doctor</string>
+    <string name="doctor_stepany">Doctor. Stepany</string>
+    <string name="doctor_robert">Doctor. Robert</string>
+    <string name="description_doctor">General Pulmonologist</string>
+    <string name="chat">Chat</string>
+
 
 </resources>
