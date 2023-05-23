@@ -88,4 +88,14 @@ Lewis suffered a fractured skull and was one of dozens of nonviolent protesters 
     <string name="cho_admin">Cho admin</string>
     <string name="date_see_article">5 days ago</string>
 
+    <string name="premium">Upgrade to <font color="#FFD700">PREMIUM</font> now ! </string>
+    <string name="be_a_part">and be part of</string>
+    <string name="Chotracker">ChoTrack Fighter!</string>
+    <string name="History">History</string>
+    <string name="see_history">See all history</string>
+    <string name="name_komet">Hi,KOMET</string>
+    <string name="description_name">Have a great day</string>
+    <string name="see_article">See all article</string>
+
+
 </resources>
