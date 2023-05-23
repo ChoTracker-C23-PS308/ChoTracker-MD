@@ -52,5 +52,16 @@
     <string name="chochat_nav">ChoChat</string>
     <string name="profile_nav">Profile</string>
 
+    <string name="edit_detail_profile">Edit Profile</string>
+    <string name="button_edit_profile">Change Picture</string>
+    <string name="name_detail_profile">Name</string>
+    <string name="email_detail_profile">Email</string>
+    <string name="birth_detail_profile">Birth of Date</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="gender">Gender</string>
+    <string name="boy">Male</string>
+    <string name="girl">Famale</string>
+    <string name="button_update">Update</string>
+
 
 </resources>
