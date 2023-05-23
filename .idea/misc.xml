@@ -25,12 +25,12 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/item_row_history.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_ads.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_login.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_onboarding.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_onboarding.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_signup.xml" value="0.23939393939393938" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
