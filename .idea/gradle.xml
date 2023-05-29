@@ -7,8 +7,12 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
         <option name="gradleHome" value="$USER_HOME$/Downloads/NGODING/Gradle/gradle-6.6" />
         <option name="gradleJvm" value="1.8" />
+=======
+        <option name="gradleJvm" value="11" />
+>>>>>>> ca359d7c9db7f2b1fe62f5151cc4d3fb71f122ac
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />

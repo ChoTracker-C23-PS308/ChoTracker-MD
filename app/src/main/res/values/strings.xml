@@ -33,5 +33,91 @@
     <string name="cholesterol_level">Cholesterol Level :</string>
     <string name="rate_cholesterol_template">\> 240</string>
     <string name="rate_cholesterol_level">High</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="name_profile">Bintang Khadafi</string>
+    <string name="email_profile">bintang@gmail.com</string>
+    <string name="darkmode">Dark Mode</string>
+    <string name="language">language</string>
+    <string name="term_of_service">Term of Service</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="about_app">About App</string>
+    <string name="rate_app">Rate this App</string>
+    <string name="logout">Logout</string>
+    <string name="seting_profile">Setting</string>
+
+    <string name="home_nave">Home</string>
+    <string name="findkes_nav">Findkes</string>
+    <string name="chochat_nav">ChoChat</string>
+    <string name="profile_nav">Profile</string>
+
+    <string name="edit_detail_profile">Edit Profile</string>
+    <string name="button_edit_profile">Change Picture</string>
+    <string name="name_detail_profile">Name</string>
+    <string name="email_detail_profile">Email</string>
+    <string name="birth_detail_profile">Birth of Date</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="gender">Gender</string>
+    <string name="boy">Male</string>
+    <string name="girl">Famale</string>
+    <string name="button_update">Update</string>
+
+    <string name="date_article">March 12,2023</string>
+    <string name="name_article">Ketahui Makanan untuk menjaga kesehatan Tubuhmu</string>
+    <string name="description_article">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march </string>
+    <string name="name_article2">Kenali Gejala Stroke Awal
+Dengan ChoTracker</string>
+    <string name="description_article2">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march </string>
+    <string name="article">Article</string>
+
+    <string name="name_detail_article">Kenali Gejala Stroke Awal
+Dengan ChoTracker</string>
+    <string name="description_detail_article">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march for voting rights across the bridge on March 7, 1965, known today as “Bloody Sunday.”
+
+Lewis suffered a fractured skull and was one of dozens of nonviolent protesters who were hospitalized. News coverage of the brutal beatings prompted increased pressure on Congress to pass the 1965 Voting Rights Act, to bar states from enforcing discriminatory laws that had long hindered prospective Black voters.
+
+And though Lewis is possibly best known for his march in Selma, he had already emerged as a leading voice in the fight for equal rights and had been arrested a number of times for the cause by that time.
+</string>
+    <string name="description_tambahan1">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march for voting rights across the bridge on March 7, 1965, known today as “Bloody Sunday.”
+
+Lewis suffered a fractured skull and was one of dozens of nonviolent protesters who were hospitalized. News coverage of the brutal beatings prompted increased pressure on Congress to pass the 1965 Voting Rights Act, to bar states from enforcing discriminatory laws that had long hindered prospective Black voters.
+</string>
+    <string name="other_articles">Other Articles</string>
+    <string name="do_you_like">Do you like it?</string>
+    <string name="cho_admin">Cho admin</string>
+    <string name="date_see_article">5 days ago</string>
+
+    <string name="premium">Upgrade to <font color="#FFD700">PREMIUM</font> now ! </string>
+    <string name="be_a_part">and be part of</string>
+    <string name="Chotracker">ChoTrack Fighter!</string>
+    <string name="History">History</string>
+    <string name="see_history">See all history</string>
+    <string name="name_komet">Hi,KOMET</string>
+    <string name="description_name">Have a great day</string>
+    <string name="see_article">See all article</string>
+
+
+    <string name="consultation">Consultation</string>
+    <string name="myChochat">MyCho Bot</string>
+    <string name="cho_description">Hi, may i help you?</string>
+    <string name="lats_see">12:00 PM</string>
+    <string name="find_doctor">Find Doctor</string>
+    <string name="choose_doctor">Choose your doctor</string>
+    <string name="doctor1">Bintang Khadapi</string>
+    <string name="doctor2">Fadila Rahim</string>
+    <string name="premium_card_upgrade">Upgrade to </string>
+    <string name="premium_card">Upgrade to
+<font color="#FFD700">PREMIUM</font> and
+consult with us</string>
+    <string name="upgrade_now">upgrade</string>
+
+    <string name="chat_with_expert">Chat with expert</string>
+    <string name="choose_a_doctor">Choose your doctor</string>
+    <string name="doctor_stepany">Doctor. Stepany</string>
+    <string name="doctor_robert">Doctor. Robert</string>
+    <string name="description_doctor">General Pulmonologist</string>
+    <string name="chat">Chat</string>
+
 
 </resources>
