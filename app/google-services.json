@@ -1,0 +1,39 @@
+ {
+  "project_info": {
+    "project_number": "484173348117",
+    "project_id": "chotracker-c23-ps308",
+    "storage_bucket": "chotracker-c23-ps308.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484173348117:android:7855784e4757ef8240bd1c",
+        "android_client_info": {
+          "package_name": "com.capstone.chotracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484173348117-tl34nuisgk6n0681eerj9a0lh229de5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-zUWybpRDk8aGGR9MEAFEj7A3GTVEsAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484173348117-p5vvm0hi4g8rl2mk8b8can8iqujmuql5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
