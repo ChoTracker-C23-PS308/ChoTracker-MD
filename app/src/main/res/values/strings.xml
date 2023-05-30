@@ -51,6 +51,7 @@
     <string name="findkes_nav">Findkes</string>
     <string name="chochat_nav">ChoChat</string>
     <string name="profile_nav">Profile</string>
+    <string name="click">click</string>
 
     <string name="edit_detail_profile">Edit Profile</string>
     <string name="button_edit_profile">Change Picture</string>

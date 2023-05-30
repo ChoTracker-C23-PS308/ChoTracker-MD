@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/gray"
+
     tools:context=".ui.chochat.ChoChatLandingPageFragment">
 
     <androidx.cardview.widget.CardView
@@ -119,38 +120,6 @@
             android:src="@drawable/mychobot" />
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@android:color/transparent"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="BottomAppBar">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:background="@android:color/white"
-            app:labelVisibilityMode="labeled"
-            app:elevation="0dp"
-            app:menu="@menu/bottom_menu" />
-    </com.google.android.material.bottomappbar.BottomAppBar>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/capture_nav"
-        app:backgroundTint="@color/main_green"
-        app:layout_anchor="@id/bottomAppBar"
-        app:maxImageSize="35dp"
-        app:tint="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="645dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
