@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
 import com.capstone.chotracker.R
 import com.capstone.chotracker.databinding.FragmentDetailProfileBinding
 import com.capstone.chotracker.databinding.FragmentProfileBinding
@@ -26,8 +27,17 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.editProfile.setOnClickListener {
-            val intent = Intent(requireContext(),DetailProfileFragment::class.java)
-            startActivity(intent)
+            val categoryFragment = DetailProfileFragment()
+            val fragmentManager = parentFragmentManager
+            fragmentManager.beginTransaction().apply {
+                replace(
+                    R.id.container,
+                    categoryFragment,
+                    DetailProfileFragment::class.java.simpleName
+                )
+                addToBackStack(null)
+                commit()
+            }
         }
     }
 

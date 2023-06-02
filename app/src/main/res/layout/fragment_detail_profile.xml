@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.profile.DetailProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,19 +16,19 @@
             android:layout_width="98dp"
             android:layout_height="28dp"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="41dp"
+            android:layout_marginTop="24dp"
             android:text="@string/edit_detail_profile"
             android:textColor="@color/main_green"
             android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/back_from_editProfile"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/back_from_editProfile"
             android:layout_width="39dp"
             android:layout_height="26dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo_back" />
