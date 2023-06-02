@@ -127,7 +127,7 @@
             android:layout_marginTop="4dp"/>
 
         <TextView
-            android:id="@+id/see_article"
+            android:id="@+id/seeArticle"
             android:layout_width="wrap_content"
             android:layout_height="31dp"
             android:layout_marginStart="150dp"

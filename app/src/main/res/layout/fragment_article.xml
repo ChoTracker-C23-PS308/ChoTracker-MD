@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.article.ArticleFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/container_article"
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/textView6"
@@ -31,7 +34,7 @@
             app:srcCompat="@drawable/logo_back" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/acticle1"
+            android:id="@+id/firts_article"
             android:layout_width="375dp"
             android:layout_height="341dp"
             android:layout_marginStart="16dp"
@@ -68,6 +71,20 @@
                 android:layout_height="237dp"
                 app:srcCompat="@drawable/article1" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#4D000000"
+                android:drawablePadding="4dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="180dp"
+                android:elevation="2dp"
+                android:padding="8dp"
+                android:text="@string/date_article"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                tools:ignore="MissingConstraints" />
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -81,7 +98,7 @@
             app:cardCornerRadius="9dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/acticle1">
+            app:layout_constraintTop_toBottomOf="@+id/firts_article">
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -120,20 +137,6 @@
                 android:textColor="@android:color/white"
                 tools:ignore="MissingConstraints" />
         </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#4D000000"
-            android:drawablePadding="4dp"
-            android:elevation="2dp"
-            android:padding="8dp"
-            android:text="@string/date_article"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@android:color/white"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="283dp"
-            tools:layout_editor_absoluteY="251dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
