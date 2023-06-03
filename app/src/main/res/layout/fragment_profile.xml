@@ -8,7 +8,7 @@
 
     tools:context=".ui.profile.ProfileFragment">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/photo_profile"
         android:layout_width="62dp"
         android:layout_height="62dp"
@@ -16,7 +16,7 @@
         android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/photo_profile" />
+        android:src="@drawable/photo_profile" />
 
     <TextView
         android:id="@+id/name_profile"

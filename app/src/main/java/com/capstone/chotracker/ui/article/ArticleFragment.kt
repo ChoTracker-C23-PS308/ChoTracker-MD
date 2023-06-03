@@ -14,6 +14,7 @@ class ArticleFragment : Fragment() {
     private var _binding: FragmentArticleBinding ? = null
     private val binding get() = _binding!!
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,7 +27,7 @@ class ArticleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.backFromArticle.setOnClickListener {
+        binding.backArticle.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
         }
 

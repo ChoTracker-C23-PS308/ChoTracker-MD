@@ -12,40 +12,50 @@
         android:layout_height="wrap_content"
         android:background="@color/white">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="98dp"
-            android:layout_height="28dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/edit_detail_profile"
-            android:textColor="@color/main_green"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/back_from_editProfile"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
+        <LinearLayout
             android:id="@+id/back_from_editProfile"
-            android:layout_width="39dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="175dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_back" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+            <ImageView
+
+                android:layout_width="39dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_back" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="98dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/edit_detail_profile"
+                android:textColor="@color/main_green"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/back_from_editProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView15"
             android:layout_width="128dp"
             android:layout_height="127dp"
             android:layout_marginStart="141dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="9dp"
             android:layout_marginEnd="142dp"
             android:src="@drawable/photo_profile"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintTop_toBottomOf="@+id/back_from_editProfile" />
 
         <Button
             android:id="@+id/button_change_picture"
@@ -66,17 +76,17 @@
             android:id="@+id/textView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            android:textSize="16sp"
             android:text="@string/name_detail_profile"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_change_picture" />
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
@@ -95,7 +105,7 @@
             android:id="@+id/email_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="16dp"
             android:text="@string/email_detail_profile"
             android:textSize="16sp"
@@ -105,10 +115,10 @@
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="emailAddress"
             android:background="@drawable/custom_edittext"
@@ -116,7 +126,7 @@
             android:inputType="text"
             android:padding="6dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.631"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_edit"
             tools:ignore="LabelFor,TextFields" />
@@ -125,19 +135,19 @@
             android:id="@+id/textView26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="16dp"
-            android:textStyle="bold"
             android:text="@string/birth_detail_profile"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email" />
 
         <EditText
             android:id="@+id/birth"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="emailAddress"
             android:background="@drawable/custom_edittext"
@@ -145,7 +155,7 @@
             android:inputType="text"
             android:padding="6dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.631"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView26"
             tools:ignore="LabelFor,TextFields" />
@@ -154,19 +164,19 @@
             android:id="@+id/textView27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="16dp"
-            android:textStyle="bold"
             android:text="@string/phone_number"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/birth" />
 
         <EditText
             android:id="@+id/phone_number"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="phone"
             android:background="@drawable/custom_edittext"
@@ -174,7 +184,7 @@
             android:inputType="text"
             android:padding="6dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.631"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView27"
             tools:ignore="LabelFor,TextFields" />
@@ -183,10 +193,10 @@
             android:id="@+id/textView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="16dp"
-            android:textStyle="bold"
             android:text="@string/gender"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phone_number" />
 
