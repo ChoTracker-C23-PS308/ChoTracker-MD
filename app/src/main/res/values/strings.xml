@@ -33,7 +33,10 @@
     <string name="cholesterol_level">Cholesterol Level :</string>
     <string name="rate_cholesterol_template">\> 240</string>
     <string name="rate_cholesterol_level">High</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="error_message">Oops..\nSomething went wrong.</string>
+    <string name="close">CLOSE</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="name_profile">Bintang Khadafi</string>
@@ -105,7 +108,7 @@ Lewis suffered a fractured skull and was one of dozens of nonviolent protesters 
     <string name="lats_see">12:00 PM</string>
     <string name="find_doctor">Find Doctor</string>
     <string name="choose_doctor">Choose your doctor</string>
-    <string name="doctor1">Bintang Khadapi</string>
+    <string name="doctor1">Bintang Khadafi</string>
     <string name="doctor2">Fadila Rahim</string>
     <string name="premium_card_upgrade">Upgrade to </string>
     <string name="premium_card">Upgrade to
@@ -119,6 +122,13 @@ consult with us</string>
     <string name="doctor_robert">Doctor. Robert</string>
     <string name="description_doctor">General Pulmonologist</string>
     <string name="chat">Chat</string>
+
+    <string name="confirm_password_not_match">Confirm password does not match!</string>
+    <string name="make_sure_all_data">Make sure all data has been filled in!</string>
+    <string name="signup_success">Sign Up Account Successfully!\nPlease check your email or spam for verify your account.</string>
+    <string name="email_has_been_used_error">Email has been used!\nPlease choose another email.</string>
+    <string name="wrong_email_password">Login failed!\nPlease make sure your email or password is correct.</string>
+    <string name="email_verification_error">Please verify your account first!</string>
 
 
 </resources>

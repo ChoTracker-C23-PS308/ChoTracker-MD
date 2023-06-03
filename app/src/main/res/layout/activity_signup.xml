@@ -8,6 +8,7 @@
 
     <include
         android:id="@+id/layout_signup"
+        android:visibility="visible"
         layout="@layout/layout_signup"/>
 
     <ProgressBar

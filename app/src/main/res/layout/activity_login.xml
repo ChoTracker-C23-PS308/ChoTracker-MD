@@ -8,6 +8,7 @@
 
     <include
         android:id="@+id/layout_login"
+        android:visibility="visible"
         layout="@layout/layout_login"/>
 
     <ProgressBar
