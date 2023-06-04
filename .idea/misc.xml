@@ -29,7 +29,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_detail_article.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_detail_profile.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_home.xml" value="0.2" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/item_row_history.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_ads.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_login.xml" value="0.25" />
@@ -45,14 +45,4 @@
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
-<<<<<<< HEAD
-=======
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.264" />
-      </ProjectState>
-    </option>
-  </component>
->>>>>>> 4cbdf26be7e2da82cb5f0b739a93fab9d32c25c5
 </project>

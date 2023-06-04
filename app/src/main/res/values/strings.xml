@@ -48,7 +48,7 @@
     <string name="about_app">About App</string>
     <string name="rate_app">Rate this App</string>
     <string name="logout">Logout</string>
-    <string name="seting_profile">Setting</string>
+    <string name="seting_profile">Settings</string>
 
     <string name="home_nave">Home</string>
     <string name="findkes_nav">Findkes</string>
@@ -125,7 +125,7 @@ consult with us</string>
 
     <string name="confirm_password_not_match">Confirm password does not match!</string>
     <string name="make_sure_all_data">Make sure all data has been filled in!</string>
-    <string name="signup_success">Sign Up Account Successfully!\nPlease check your email or spam for verify your account.</string>
+    <string name="signup_success">Sign Up Account Successfully!\nPlease check your email or spam and verify your account.</string>
     <string name="email_has_been_used_error">Email has been used!\nPlease choose another email.</string>
     <string name="wrong_email_password">Login failed!\nPlease make sure your email or password is correct.</string>
     <string name="email_verification_error">Please verify your account first!</string>
