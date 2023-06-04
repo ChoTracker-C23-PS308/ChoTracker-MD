@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:id="@+id/container_home"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".ui.home.HomeFragment">
 
 
@@ -32,6 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_margin="0dp"
                     tools:ignore="ExtraText">
 
                     <TextView
@@ -152,7 +154,7 @@
 
 
             <LinearLayout
-                android:id="@id/see_history"
+                android:id="@+id/see_history"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -164,7 +166,7 @@
                     android:text="@string/History" />
 
                 <TextView
-                    android:id="@+id/see_history"
+                    android:id="@+id/history"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="220dp"
@@ -198,7 +200,7 @@
                 android:src="@drawable/history_image" />
 
             <LinearLayout
-                android:id="@id/see_article"
+                android:id="@id/seeArticle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -210,7 +212,7 @@
                     android:text="@string/article" />
 
                 <TextView
-                    android:id="@+id/see_article"
+                    android:id="@+id/article"
                     android:layout_width="wrap_content"
                     android:layout_height="19dp"
                     android:layout_marginStart="220dp"
