@@ -31,20 +31,7 @@ class ArticleFragment : Fragment() {
             requireActivity().supportFragmentManager.popBackStack()
         }
 
-        binding.article2.setOnClickListener {
-            val categoryFragment = DetailArticleFragment()
-            val fragmentManager = parentFragmentManager
-            fragmentManager.beginTransaction().apply {
 
-                replace(
-                    R.id.container_article,
-                    categoryFragment,
-                    DetailArticleFragment::class.java.simpleName
-                )
-                addToBackStack(null)
-                commit()
-            }
-        }
     }
     override fun onDestroy() {
         super.onDestroy()

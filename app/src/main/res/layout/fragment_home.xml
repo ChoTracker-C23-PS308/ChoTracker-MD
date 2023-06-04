@@ -204,6 +204,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+                android:stateListAnimator="@animator/button_press_anim"
                 android:orientation="horizontal">
 
                 <TextView
@@ -238,20 +239,20 @@
                 android:background="@color/main_green" />
 
             <LinearLayout
-                android:layout_width="266dp"
-                android:layout_height="249dp"
+                android:layout_width="267dp"
+                android:layout_height="166dp"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/gray"
-                    app:cardCornerRadius="12sp">
+                    android:layout_height="175dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="15dp">
 
                     <ImageView
-                        android:layout_width="321dp"
-                        android:layout_height="210dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
                         android:src="@drawable/article1" />
 
                     <TextView
@@ -259,9 +260,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="6dp"
-                        android:textColor="@color/dark_main_green"
-                        android:layout_marginTop="210dp"
-                        android:text="@string/name_article" />
+                        android:layout_marginTop="126dp"
+                        android:text="@string/name_article"
+                        android:textColor="@color/dark_main_green" />
 
                 </androidx.cardview.widget.CardView>
 
