@@ -27,7 +27,8 @@
             android:exported="false" />
         <activity
             android:name=".ui.main.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            />
         <activity
             android:name=".ui.splash_screen.SplashScreenActivity"
             android:exported="true"

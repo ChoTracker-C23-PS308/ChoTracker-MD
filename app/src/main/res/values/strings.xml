@@ -130,5 +130,16 @@ consult with us</string>
     <string name="wrong_email_password">Login failed!\nPlease make sure your email or password is correct.</string>
     <string name="email_verification_error">Please verify your account first!</string>
 
+    <string name="title">Title</string>
+    <string name="desc">Desc</string>
+
+    <string-array name="data_title">
+        <item>Ketahui Makanan untuk menjaga kesehatan Tubuhmu</item>
+    </string-array>
+
+    <string-array name="data_desc">
+        <item>The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march</item>
+    </string-array>
+
 
 </resources>
