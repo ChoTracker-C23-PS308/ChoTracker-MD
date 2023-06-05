@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable-v23/bg_splash_screen.xml" value="0.3635" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable-v24/bg_row_recycleview.xml" value="0.3635" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/background_alpha_dark.xml" value="0.261" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/background_circular_green.xml" value="0.211" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/bg_button_ads.xml" value="0.3635" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/bg_button_continue_login.xml" value="0.3625" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/bg_button_disable.xml" value="0.3635" />
@@ -12,10 +14,18 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/bg_rounded_white.xml" value="0.3625" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/bg_splash_screen.xml" value="0.3625" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_arrow_forward.xml" value="0.1935" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_baseline_arrow_back_36.xml" value="0.261" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_baseline_check_36.xml" value="0.261" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_baseline_expand_less_36.xml" value="0.261" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_baseline_flash_off_36.xml" value="0.261" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_baseline_flash_on_36.xml" value="0.261" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_baseline_flip_camera_36.xml" value="0.261" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_check_box.xml" value="0.261" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_circle_24.xml" value="0.3635" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1935" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_person.xml" value="0.3635" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_ads.xml" value="0.18920765027322403" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_chotrack_cam.xml" value="0.18" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_custom_pop_up_alert.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_login.xml" value="0.11710526315789474" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_main.xml" value="0.22" />
@@ -35,6 +45,8 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_login.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_onboarding.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/layout_signup.xml" value="0.23939393939393938" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/recycler_item_date_header.xml" value="0.22894736842105262" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/recycler_item_media.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/menu/bottom_menu.xml" value="0.22894736842105262" />
       </map>
     </option>

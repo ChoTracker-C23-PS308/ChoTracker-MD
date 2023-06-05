@@ -25,6 +25,7 @@
         android:background="@android:color/transparent"
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="50dp"
+        app:contentInsetStart="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="BottomAppBar">
 
@@ -32,7 +33,6 @@
             android:id="@+id/bottomNavigationView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
             app:elevation="0dp"
             android:background="@android:color/white"
             app:labelVisibilityMode="labeled"
@@ -40,10 +40,10 @@
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/chotrack_cam_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:contentDescription="@string/click"
         android:src="@drawable/capture_nav"
         app:backgroundTint="@color/main_green"
@@ -51,8 +51,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
         app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
         app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-        app:maxImageSize="35dp"
+        app:maxImageSize="60dp"
         app:tint="@color/white"
+        app:elevation="0dp"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
