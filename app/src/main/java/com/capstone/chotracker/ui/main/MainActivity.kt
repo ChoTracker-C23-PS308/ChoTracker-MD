@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
@@ -16,6 +15,7 @@ import com.capstone.chotracker.chotrack_cam.ChotrackCamActivity.Companion.REQUES
 import com.capstone.chotracker.chotrack_cam.ChotrackCamOptions
 import com.capstone.chotracker.databinding.ActivityMainBinding
 import com.capstone.chotracker.ui.chochat.ChoChatLandingPageFragment
+import com.capstone.chotracker.ui.chotrack.ChotrackActivity
 import com.capstone.chotracker.ui.home.HomeFragment
 import com.capstone.chotracker.ui.profile.ProfileFragment
 
@@ -45,14 +45,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
+    @Suppress("DEPRECATION")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_PICKER){
-            val mImageList = data?.getStringArrayListExtra(PICKED_MEDIA_LIST) as ArrayList
-            mImageList.map {
-                Log.e(TAG, "onActivityResult: $it" )
-            }
+            val mImageList = data?.getStringArrayListExtra(PICKED_MEDIA_LIST) as ArrayList<String>
+            val selectedImagePath = mImageList[0] // Ambil path gambar pertama
+
+            val intent = Intent(this, ChotrackActivity::class.java)
+            intent.putExtra(EXTRA_IMAGE, selectedImagePath)
+            startActivity(intent)
         }
     }
 
@@ -92,7 +96,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val TAG = "MainActivity"
+        const val EXTRA_IMAGE= "Extra Image"
     }
 
 }

@@ -87,7 +87,9 @@ class ChotrackCamActivity : AppCompatActivity() {
         }
 
         // Setup the listener for take photo button
-        binding.imageViewClick.setOnClickListener { takePhoto() }
+        binding.imageViewClick.setOnClickListener {
+            takePhoto()
+        }
 
         outputDirectory = getOutputDirectory()
 
@@ -212,7 +214,7 @@ class ChotrackCamActivity : AppCompatActivity() {
         val metrics = DisplayMetrics().also { binding.viewFinder.display.getRealMetrics(it) }
         Log.d(TAG, "Screen metrics: ${metrics.widthPixels} x ${metrics.heightPixels}")
 
-        val screenAspectRatio = aspectRatio(metrics.widthPixels, metrics.heightPixels)
+        val screenAspectRatio = aspectRatio()
         Log.d(TAG, "Preview aspect ratio: $screenAspectRatio")
 
         val rotation = binding.viewFinder.display.rotation
@@ -271,18 +273,15 @@ class ChotrackCamActivity : AppCompatActivity() {
                 ).format(System.currentTimeMillis()) + PHOTO_EXTENSION
             )
 
-            // Setup image capture metadata
             val metadata = ImageCapture.Metadata().apply {
                 // Mirror image when using the front camera
                 isReversedHorizontal = lensFacing == CameraSelector.LENS_FACING_FRONT
             }
 
-            // Create output options object which contains file + metadata
             val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile)
                 .setMetadata(metadata)
                 .build()
 
-            // Setup image capture listener which is triggered after photo has been taken
             imageCapture.takePicture(
                 outputOptions, cameraExecutor, object : ImageCapture.OnImageSavedCallback {
                     override fun onError(exc: ImageCaptureException) {
@@ -293,9 +292,6 @@ class ChotrackCamActivity : AppCompatActivity() {
                         val savedUri = output.savedUri ?: Uri.fromFile(photoFile)
                         Log.d(TAG, "Photo capture succeeded: $savedUri")
 
-                        // If the folder selected is an external media directory, this is
-                        // unnecessary but otherwise other apps will not be able to access our
-                        // images unless we scan them using [MediaScannerConnection]
                         val mimeType = MimeTypeMap.getSingleton()
                             .getMimeTypeFromExtension(savedUri.toFile().extension)
                         MediaScannerConnection.scanFile(
@@ -688,26 +684,14 @@ class ChotrackCamActivity : AppCompatActivity() {
             mediaDir else filesDir
     }
 
-    /**
-     *  [androidx.camera.core.AspectRatio]. Currently it has values of 4:3 & 16:9.
-     *
-     *  Detecting the most suitable ratio for dimensions provided in @params by counting absolute
-     *  of preview ratio to one of the provided values.
-     *
-     *  @param width - preview width
-     *  @param height - preview height
-     *  @return suitable aspect ratio
-     */
-    private fun aspectRatio(width: Int, height: Int): Int {
+    private fun aspectRatio(): Int {
         return AspectRatio.RATIO_4_3
     }
 
-    /** Returns true if the device has an available back camera. False otherwise */
     private fun hasBackCamera(): Boolean {
         return cameraProvider?.hasCamera(CameraSelector.DEFAULT_BACK_CAMERA) ?: false
     }
 
-    /** Returns true if the device has an available front camera. False otherwise */
     private fun hasFrontCamera(): Boolean {
         return cameraProvider?.hasCamera(CameraSelector.DEFAULT_FRONT_CAMERA) ?: false
     }
@@ -720,25 +704,9 @@ class ChotrackCamActivity : AppCompatActivity() {
         const val PICKED_MEDIA_LIST = "PICKED_MEDIA_LIST"
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val PHOTO_EXTENSION = ".jpg"
-        private const val RATIO_4_3_VALUE = 4.0 / 3.0
-        private const val RATIO_16_9_VALUE = 16.0 / 9.0
 
         const val ANIMATION_FAST_MILLIS = 50L
         const val ANIMATION_SLOW_MILLIS = 100L
-
-        @JvmStatic
-        fun startPicker(fragment: Fragment, mChotrackCamOptions: ChotrackCamOptions) {
-            ChotrackCamPermission.checkForCameraWritePermissions(
-                fragment,
-                object : PermissionCallback {
-                    override fun onPermission(approved: Boolean) {
-                        val mPickerIntent = Intent(fragment.activity, ChotrackCamActivity::class.java)
-                        mPickerIntent.putExtra(PICKER_OPTIONS, mChotrackCamOptions)
-                        mPickerIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
-                        fragment.startActivityForResult(mPickerIntent, REQUEST_CODE_PICKER)
-                    }
-                })
-        }
 
         @JvmStatic
         fun startPicker(activity: FragmentActivity, mChotrackCamOptions: ChotrackCamOptions) {
