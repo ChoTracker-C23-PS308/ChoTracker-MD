@@ -130,22 +130,16 @@ consult with us</string>
     <string name="wrong_email_password">Login failed!\nPlease make sure your email or password is correct.</string>
     <string name="email_verification_error">Please verify your account first!</string>
 
-    <string name="picker_bottom_message">Tap for photo</string>
+    <string name="title">Title</string>
+    <string name="desc">Desc</string>
 
-    <string name="recent">Recent</string>
-    <string name="last_month">Last Month</string>
-    <string name="last_week">Last Week</string>
+    <string-array name="data_title">
+        <item>Ketahui Makanan untuk menjaga kesehatan Tubuhmu</item>
+    </string-array>
 
-    <string name="tap_to_select">Tap to Select</string>
-    <string name="images_selected">%s Selected</string>
-    <string name="str_ok">OK</string>
-
-    <string name="result">Result</string>
-    <string name="save_result">Save Result</string>
-    <string name="result_total_cholesterol">100</string>
-    <string name="result_cholesterol_level">Normal</string>
-    <string name="back">Back</string>
-
+    <string-array name="data_desc">
+        <item>The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march</item>
+    </string-array>
 
 
 </resources>

@@ -2,10 +2,14 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+<<<<<<< HEAD
     id 'kotlin-kapt'
     id 'kotlin-android'
     id 'kotlin-parcelize'
 
+=======
+    id 'kotlin-parcelize'
+>>>>>>> c2e089addac6fe3929befb43d8f608b460c34255
 }
 
 android {
@@ -49,10 +53,12 @@ dependencies {
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation  'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.firebase:firebase-auth:22.0.0'
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
     implementation 'com.google.firebase:firebase-auth:22.0.0'
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
