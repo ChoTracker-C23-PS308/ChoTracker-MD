@@ -4,12 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.capstone.chotracker.data.api.ApiConfig
+import com.capstone.chotracker.data.api.model_ml.ApiConfigModelML
 import com.capstone.chotracker.utils.ResultCondition
 import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
 import com.capstone.chotracker.R
-import com.capstone.chotracker.data.response.ChotrackResponseModel
+import com.capstone.chotracker.data.response.chotrack.ChotrackResponseModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -33,7 +33,7 @@ class ChotrackViewModel : ViewModel() {
 
             val response = withContext(Dispatchers.IO) {
                 try {
-                    val apiInterface = ApiConfig.getApiInterface()
+                    val apiInterface = ApiConfigModelML.getApiModel()
                     val result = apiInterface.predict(imageFile)
                     ResultCondition.SuccessState(result)
                 } catch (e: Exception) {

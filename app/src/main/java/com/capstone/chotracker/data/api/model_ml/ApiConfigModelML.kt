@@ -1,4 +1,4 @@
-package com.capstone.chotracker.data.api
+package com.capstone.chotracker.data.api.model_ml
 
 import androidx.viewbinding.BuildConfig
 import okhttp3.OkHttpClient
@@ -6,11 +6,11 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiConfig {
+class ApiConfigModelML {
     companion object {
         private const val BASE_URL = "https://a472-2001-448a-10e8-342d-20b5-44e1-4130-221f.ngrok-free.app/"
 
-        fun getApiInterface(): ApiInterface {
+        fun getApiModel(): ApiServiceModelML {
             val loggingInterceptor = HttpLoggingInterceptor().apply {
                 level = if (BuildConfig.DEBUG) {
                     HttpLoggingInterceptor.Level.BODY
@@ -29,7 +29,7 @@ class ApiConfig {
                 .client(client)
                 .build()
 
-            return retrofit.create(ApiInterface::class.java)
+            return retrofit.create(ApiServiceModelML::class.java)
         }
     }
 }

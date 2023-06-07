@@ -3,7 +3,6 @@ package com.capstone.chotracker.ui.chotrack
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
@@ -16,6 +15,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
+import java.io.FileOutputStream
 
 class ChotrackActivity : AppCompatActivity() {
 
@@ -111,14 +111,13 @@ class ChotrackActivity : AppCompatActivity() {
 
     private fun getFileFromUri(uri: Uri): File? {
         return try {
-            val filePath = uri.path
-            if (filePath != null) {
-                val file = File(filePath)
-                if (file.exists()) {
-                    return file
-                }
-            }
-            null
+            val inputStream = contentResolver.openInputStream(uri)
+            val file = File.createTempFile("temp_image", null, cacheDir)
+            val outputStream = FileOutputStream(file)
+            inputStream?.copyTo(outputStream)
+            outputStream.close()
+            inputStream?.close()
+            file
         } catch (e: Exception) {
             e.printStackTrace()
             null

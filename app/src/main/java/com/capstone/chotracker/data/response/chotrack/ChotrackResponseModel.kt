@@ -1,11 +1,11 @@
-package com.capstone.chotracker.data.response
+package com.capstone.chotracker.data.response.chotrack
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class ChotrackResponseModel (
+data class ChotrackResponseModel (
 
     @field:SerializedName("message")
     val message: String,

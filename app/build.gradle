@@ -2,14 +2,10 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
-<<<<<<< HEAD
     id 'kotlin-kapt'
     id 'kotlin-android'
     id 'kotlin-parcelize'
 
-=======
-    id 'kotlin-parcelize'
->>>>>>> c2e089addac6fe3929befb43d8f608b460c34255
 }
 
 android {
@@ -23,7 +19,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", 'BASE_URL', API_CHOTRACKER
 
     }
 
@@ -89,6 +84,5 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
 
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-
 
 }

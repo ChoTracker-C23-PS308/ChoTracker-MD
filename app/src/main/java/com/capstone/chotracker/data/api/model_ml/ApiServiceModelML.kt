@@ -1,10 +1,10 @@
-package com.capstone.chotracker.data.api
+package com.capstone.chotracker.data.api.model_ml
 
-import com.capstone.chotracker.data.response.ChotrackResponseModel
+import com.capstone.chotracker.data.response.chotrack.ChotrackResponseModel
 import okhttp3.MultipartBody
 import retrofit2.http.*
 
-interface ApiInterface {
+interface ApiServiceModelML {
 
     @Multipart
     @POST("api/v1/predict/regression")
