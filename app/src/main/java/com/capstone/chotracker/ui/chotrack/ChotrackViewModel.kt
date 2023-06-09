@@ -9,57 +9,85 @@ import com.capstone.chotracker.utils.ResultCondition
 import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
 import com.capstone.chotracker.R
+import com.capstone.chotracker.data.api.general.ApiConfigGeneral
 import com.capstone.chotracker.data.response.chotrack.ChotrackResponseModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import com.capstone.chotracker.data.response.history.HistoryModel
+
 
 class ChotrackViewModel : ViewModel() {
 
-    private val _successState = MutableLiveData<Float?>()
-    val successState: LiveData<Float?> get() = _successState
+    private val _predictState = MutableLiveData<ResultCondition<Float?>>()
+    val predictState: LiveData<ResultCondition<Float?>> get() = _predictState
 
-    private val _errorState = MutableLiveData<Int?>()
-    val errorState: LiveData<Int?> get() = _errorState
+    private val _addHistoryState = MutableLiveData<ResultCondition<String>>()
+    val addHistoryState: LiveData<ResultCondition<String>> get() = _addHistoryState
 
-    private val _loadingState = MutableLiveData<Boolean>()
-    val loadingState: LiveData<Boolean> get() = _loadingState
+    private val _addImageState = MutableLiveData<ResultCondition<String>>()
+    val addImageState: LiveData<ResultCondition<String>> get() = _addHistoryState
 
     fun predictCholesterol(imageFile: MultipartBody.Part) {
-        _successState.value = null
-        _errorState.value = null
+        _predictState.value = ResultCondition.LoadingState
 
         viewModelScope.launch {
-            _loadingState.value = true
+            try {
+                val apiInterface = ApiConfigModelML.getApiModel()
+                val result = apiInterface.predict(imageFile)
 
-            val response = withContext(Dispatchers.IO) {
-                try {
-                    val apiInterface = ApiConfigModelML.getApiModel()
-                    val result = apiInterface.predict(imageFile)
-                    ResultCondition.SuccessState(result)
-                } catch (e: Exception) {
-                    ResultCondition.ErrorState(R.string.error_message)
+                val cholesterolResult = result as? ChotrackResponseModel
+                if (cholesterolResult != null) {
+                    _predictState.value = ResultCondition.SuccessState(cholesterolResult.prediction)
+                } else {
+                    _predictState.value = ResultCondition.ErrorState(R.string.error_message)
                 }
-            }
-
-            _loadingState.value = false
-
-            when (response) {
-                is ResultCondition.SuccessState<*> -> {
-                    val result = response.data as? ChotrackResponseModel
-                    if (result != null) {
-                        _successState.value = result.prediction
-                    } else {
-                        _errorState.value = R.string.error_message
-                    }
-                }
-                is ResultCondition.ErrorState -> {
-                    val errorMessage = response.data
-                    _errorState.value = errorMessage
-                }
-                ResultCondition.LoadingState -> {
-                    _loadingState.value = true
-                }
+            } catch (e: Exception) {
+                _predictState.value = ResultCondition.ErrorState(R.string.error_message)
             }
         }
     }
+
+    fun saveResult(token: String, uid: String, imagePart: MultipartBody.Part, totalKolestrol: Float, tingkat: String) {
+        _addImageState.value = ResultCondition.LoadingState
+
+        viewModelScope.launch {
+            try {
+                val apiService = ApiConfigGeneral.getApiGeneral()
+                val response = apiService.addImage(
+                    token = "Bearer $token",
+                    uid = uid,
+                    file = imagePart
+                )
+
+                val imageUrl = response.data
+                _addImageState.value = ResultCondition.SuccessState(imageUrl)
+
+                _addHistoryState.value = ResultCondition.LoadingState
+
+                viewModelScope.launch {
+                    try {
+                        val responseHistory = apiService.addHistory(
+                            token = "Bearer $token",
+                            uid = uid,
+                            data = HistoryModel(
+                                uid = uid,
+                                total_kolestrol = totalKolestrol,
+                                tingkat = tingkat,
+                                image_url = imageUrl
+                            )
+                        )
+
+                        val addHistoryMessage = responseHistory.message
+                        _addHistoryState.value = ResultCondition.SuccessState(addHistoryMessage)
+
+                    } catch (e: Exception) {
+                        _addHistoryState.value = ResultCondition.ErrorState(R.string.error_message)
+                    }
+                }
+
+            } catch (e: Exception) {
+                _addImageState.value = ResultCondition.ErrorState(R.string.error_message)
+            }
+        }
+    }
+
 }
+

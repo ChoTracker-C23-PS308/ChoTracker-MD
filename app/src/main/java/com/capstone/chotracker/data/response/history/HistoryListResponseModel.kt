@@ -8,19 +8,19 @@ import java.sql.Time
 @Parcelize
 data class HistoryListResponseModel (
 
-    @field:SerializedName("Uid")
+    @field:SerializedName("uid")
     val uid: String,
 
-    @field:SerializedName("TotalCholesterol")
+    @field:SerializedName("total_kolestrol")
     val totalCholesterol: Float,
 
-    @field:SerializedName("Tingkat")
+    @field:SerializedName("tingkat")
     val tingkat: String,
 
-    @field:SerializedName("ImageUrl")
+    @field:SerializedName("image_url")
     val imageUrl: String,
 
-    @field:SerializedName("CreatedAt")
-    val date: Time,
+    @field:SerializedName("created_at")
+    val date: String,
 
-    ): Parcelable
+): Parcelable

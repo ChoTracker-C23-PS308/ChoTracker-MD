@@ -7,10 +7,10 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class AddImageResponseModel (
 
-    @SerializedName("Data")
+    @SerializedName("data")
     val data: String,
 
-    @SerializedName("Message")
+    @SerializedName("message")
     val message: String
 
 ): Parcelable

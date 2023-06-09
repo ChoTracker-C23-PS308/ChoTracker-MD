@@ -1,5 +1,6 @@
 package com.capstone.chotracker.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +9,7 @@ import android.view.ViewGroup
 import com.capstone.chotracker.R
 import com.capstone.chotracker.databinding.FragmentHomeBinding
 import com.capstone.chotracker.ui.article.ArticleFragment
-import com.capstone.chotracker.ui.profile.DetailProfileFragment
+import com.capstone.chotracker.ui.history.HistoryActivity
 
 
 class HomeFragment : Fragment() {
@@ -29,6 +30,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        seeAllHistory()
+
         binding.seeArticle.setOnClickListener {
             val categoryFragment = ArticleFragment()
             val fragmentManager = parentFragmentManager
@@ -43,6 +46,14 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
+    fun seeAllHistory() {
+        binding.seeAllHistory.setOnClickListener {
+            val intent = Intent(requireContext(), HistoryActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

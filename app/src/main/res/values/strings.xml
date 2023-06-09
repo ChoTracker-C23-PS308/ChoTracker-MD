@@ -148,6 +148,9 @@ consult with us</string>
 
     <string name="title">Title</string>
     <string name="desc">Desc</string>
+    <string name="save_result_success">Result saved successfully!</string>
+    <string name="error_get_token">Internal server error.\nPlease try again later.</string>
+    <string name="history">History Result</string>
 
     <string-array name="data_title">
         <item>Ketahui Makanan untuk menjaga kesehatan Tubuhmu</item>

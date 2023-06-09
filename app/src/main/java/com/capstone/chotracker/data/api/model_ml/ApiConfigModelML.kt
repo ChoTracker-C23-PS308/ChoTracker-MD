@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfigModelML {
     companion object {
-        private const val BASE_URL = "https://a472-2001-448a-10e8-342d-20b5-44e1-4130-221f.ngrok-free.app/"
+        private const val BASE_URL = "https://0270-2001-448a-10e8-342d-8e7-5417-937e-e54d.ngrok-free.app/"
 
         fun getApiModel(): ApiServiceModelML {
             val loggingInterceptor = HttpLoggingInterceptor().apply {

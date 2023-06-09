@@ -1,27 +1,40 @@
 package com.capstone.chotracker.ui.chotrack
 
+import android.content.Intent
+import android.database.Cursor
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.chotracker.R
 import com.capstone.chotracker.custom_view.CustomPopUpAlert
 import com.capstone.chotracker.databinding.ActivityChotrackBinding
+import com.capstone.chotracker.ui.history.HistoryActivity
 import com.capstone.chotracker.ui.main.MainActivity
+import com.capstone.chotracker.utils.ResultCondition
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
-import java.io.FileOutputStream
 
 class ChotrackActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityChotrackBinding
     private lateinit var imageUri: Uri
     private lateinit var viewModel: ChotrackViewModel
+    private lateinit var auth: FirebaseAuth
+
+    private var predictionResult: Float = 10.0f
+    private var levelResult: String = "Normal"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,34 +47,46 @@ class ChotrackActivity : AppCompatActivity() {
             binding.ivResult.setImageURI(imageUri)
         }
 
-        viewModel = ViewModelProvider(this)[ChotrackViewModel::class.java]
+        viewModel = ViewModelProvider(this).get(ChotrackViewModel::class.java)
+        auth = FirebaseAuth.getInstance()
 
-        viewModel.loadingState.observe(this, Observer { isLoading ->
-            progressLoading(isLoading)
-        })
+        buttonPredictHandler()
+        predictObserve()
 
-        viewModel.successState.observe(this, Observer { prediction ->
-            handleSuccess(prediction)
-        })
+        saveResultHandler()
+        saveResultObserve()
 
-        viewModel.errorState.observe(this, Observer { errorMessage ->
-            handleError(errorMessage)
-        })
-
-        binding.resultButton.setOnClickListener {
-            buttonPredictHandler()
-        }
     }
 
     private fun buttonPredictHandler() {
-        val imageFile = getFileFromUri(imageUri)
-        val requestFile = imageFile?.asRequestBody("multipart/form-data".toMediaType())
-        val imagePart = requestFile?.let {
-            MultipartBody.Part.createFormData("file", imageFile.name, it)
-        }
+        binding.resultButton.setOnClickListener {
+            val imageFile = getFileFromUri(imageUri)
+            val requestFile = imageFile?.asRequestBody("multipart/form-data".toMediaType())
+            val imagePart = requestFile?.let {
+                MultipartBody.Part.createFormData("file", imageFile.name, it)
+            }
 
-        if (imagePart != null) {
-            viewModel.predictCholesterol(imagePart)
+            if (imagePart != null) {
+                viewModel.predictCholesterol(imagePart)
+            }
+        }
+    }
+
+    private fun predictObserve() {
+        viewModel.predictState.observe(this) { result ->
+            when (result) {
+                is ResultCondition.LoadingState -> {
+                    progressLoading(true)
+                }
+                is ResultCondition.SuccessState -> {
+                    progressLoading(false)
+                    handleSuccess(result.data)
+                }
+                is ResultCondition.ErrorState -> {
+                    progressLoading(false)
+                    handleError(result.data)
+                }
+            }
         }
     }
 
@@ -69,59 +94,153 @@ class ChotrackActivity : AppCompatActivity() {
         prediction?.let {
             binding.tvTotalCholesterol.text = it.toString()
 
-            if (prediction in 0.0..199.0) {
-                binding.tvCholesterolLevel.setText("Normal")
+            val level: String = when {
+                it in 0.0..199.0 -> {
+                    binding.tvCholesterolLevel.text = "Normal"
+                    binding.tvCholesterolLevel.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
+                    "Normal"
+                }
+                it in 200.0..239.0 -> {
+                    binding.tvCholesterolLevel.text = "At Risk"
+                    binding.tvCholesterolLevel.setBackgroundColor(ContextCompat.getColor(this, R.color.orange))
+                    "At Risk"
+                }
+                it > 240 -> {
+                    binding.tvCholesterolLevel.text = "High"
+                    binding.tvCholesterolLevel.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+                    "High"
+                }
+                else -> {
+                    binding.tvCholesterolLevel.text = "Unidentified"
+                    binding.tvCholesterolLevel.setBackgroundColor(ContextCompat.getColor(this, R.color.black))
+                    "Unidentified"
+                }
+            }
 
-                val greenColor = ContextCompat.getColor(this, R.color.green)
-                binding.tvCholesterolLevel.setBackgroundColor(greenColor)
-            } else if (prediction in 200.0..239.0) {
-                binding.tvCholesterolLevel.setText("At Risk")
+            predictionResult = it
+            levelResult = level
+        }
+    }
 
-                val colorOrange = ContextCompat.getColor(this, R.color.orange)
-                binding.tvCholesterolLevel.setBackgroundColor(colorOrange)
-            } else if (prediction > 240) {
-                binding.tvCholesterolLevel.setText("High")
+    private fun saveResultHandler() {
+        binding.saveResultButton.setOnClickListener {
+            val imageFile = getFileFromUri(imageUri)
+            val requestFile = imageFile?.asRequestBody("multipart/form-data".toMediaType())
+            val imagePart = requestFile?.let {
+                MultipartBody.Part.createFormData("file", imageFile.name, it)
+            }
 
-                val colorRed = ContextCompat.getColor(this, R.color.red)
-                binding.tvCholesterolLevel.setBackgroundColor(colorRed)
-            } else {
-                binding.tvCholesterolLevel.setText("Unidentified")
+            if (imagePart != null) {
+                CoroutineScope(Dispatchers.Main).launch {
+                    val token = getFirebaseToken()
+                    val uid = auth.currentUser?.uid
+                    val totalKolesterol = predictionResult
+                    val tingkat = levelResult
 
-                val colorBlack = ContextCompat.getColor(this, R.color.black)
-                binding.tvCholesterolLevel.setBackgroundColor(colorBlack)
+                    if (uid != null) {
+                        if (token != null) {
+                            viewModel.saveResult(token, uid, imagePart, totalKolesterol, tingkat)
+                        }
+                    }
+                }
             }
         }
     }
 
-    private fun handleError(errorMessage: Int?) {
-        errorMessage?.let {
-            CustomPopUpAlert(this, it).show()
+    private suspend fun getFirebaseToken(): String? {
+        val currentUser = auth.currentUser
+        return try {
+            currentUser?.getIdToken(true)?.await()?.token
+        } catch (e: Exception) {
+            Log.e("Firebase Token", "Error getting Firebase token: ${e.message}")
+            null
         }
     }
 
-    private fun progressLoading(loading: Boolean) {
-        if (loading) {
-            binding.progressBar1.visibility = View.VISIBLE
-            binding.progressBar2.visibility = View.VISIBLE
-        } else {
-            binding.progressBar1.visibility = View.GONE
-            binding.progressBar2.visibility = View.GONE
+    private fun saveResultObserve() {
+        viewModel.addHistoryState.observe(this) { result ->
+            when (result) {
+                is ResultCondition.LoadingState -> {
+                    progressSaveLoading(true)
+                }
+                is ResultCondition.SuccessState -> {
+                    handleSaveResult(true)
+                }
+                is ResultCondition.ErrorState -> {
+                    handleError(result.data)
+                }
+            }
         }
+    }
+
+
+
+
+    private fun handleSaveResult(success: Boolean) {
+        if (success) {
+            val alert = CustomPopUpAlert(this, R.string.save_result_success)
+            alert.show()
+            alert.setOnDismissListener {
+                navigateToHistory()
+            }
+        }
+
+    }
+
+    private fun navigateToHistory() {
+        val intent = Intent(this, HistoryActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun handleError(errorMessage: Int) {
+        CustomPopUpAlert(this, errorMessage).show()
+    }
+
+    private fun progressLoading(loading: Boolean) {
+        binding.progressBar1.visibility = if (loading) View.VISIBLE else View.GONE
+        binding.progressBar2.visibility = if (loading) View.VISIBLE else View.GONE
+    }
+
+    private fun progressSaveLoading(loading: Boolean) {
+        binding.progressBarSave.visibility = if (loading) View.VISIBLE else View.GONE
     }
 
     private fun getFileFromUri(uri: Uri): File? {
         return try {
-            val inputStream = contentResolver.openInputStream(uri)
-            val file = File.createTempFile("temp_image", null, cacheDir)
-            val outputStream = FileOutputStream(file)
-            inputStream?.copyTo(outputStream)
-            outputStream.close()
-            inputStream?.close()
-            file
+            val filePath = getRealPathFromUri(uri)
+            if (filePath != null) {
+                File(filePath)
+            } else {
+                null
+            }
         } catch (e: Exception) {
             e.printStackTrace()
             null
         }
     }
 
+    private fun getRealPathFromUri(uri: Uri): String? {
+        var realPath: String? = null
+        val projection = arrayOf(MediaStore.Images.Media.DATA)
+        var cursor: Cursor? = null
+        try {
+            cursor = contentResolver.query(uri, projection, null, null, null)
+            cursor?.let {
+                val columnIndex = it.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+                if (it.moveToFirst()) {
+                    realPath = it.getString(columnIndex)
+                }
+            }
+        } finally {
+            cursor?.close()
+        }
+        if (realPath == null) {
+            realPath = uri.path
+        }
+        return realPath
+    }
+
+
 }
+

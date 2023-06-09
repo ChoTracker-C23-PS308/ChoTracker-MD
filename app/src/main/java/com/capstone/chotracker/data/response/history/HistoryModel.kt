@@ -6,9 +6,9 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class HistoryModel (
 
-    val Uid: String,
-    val TotalKolestrol: Float,
-    val Tingkat: String,
-    val ImageUrl: String
+    val uid: String,
+    val total_kolestrol: Float,
+    val tingkat: String,
+    val image_url: String
 
 ): Parcelable

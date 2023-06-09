@@ -8,7 +8,7 @@ import kotlinx.parcelize.Parcelize
 data class HistoryResponseModel (
 
     @field:SerializedName("data")
-    val data: ArrayList<HistoryListResponseModel>,
+    val data: List<HistoryListResponseModel>,
 
     @field:SerializedName("message")
     val message: String
