@@ -145,12 +145,15 @@ consult with us</string>
     <string name="result_total_cholesterol">100</string>
     <string name="result_cholesterol_level">Normal</string>
     <string name="back">Back</string>
+    <string name="detail_title">%1$s\'s aticle</string>
 
+    <string name="no_data">NO DATA</string>
     <string name="title">Title</string>
     <string name="desc">Desc</string>
     <string name="save_result_success">Result saved successfully!</string>
     <string name="error_get_token">Internal server error.\nPlease try again later.</string>
     <string name="history">History Result</string>
+    <string name="decss">TextView</string>
 
     <string-array name="data_title">
         <item>Ketahui Makanan untuk menjaga kesehatan Tubuhmu</item>
