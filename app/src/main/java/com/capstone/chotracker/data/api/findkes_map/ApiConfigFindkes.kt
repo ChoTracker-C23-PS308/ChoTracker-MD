@@ -1,16 +1,18 @@
-package com.capstone.chotracker.data.api.model_ml
+package com.capstone.chotracker.data.api.findkes_map
 
 import androidx.viewbinding.BuildConfig
+import com.capstone.chotracker.data.api.general.ApiServiceGeneral
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiConfigModelML {
-    companion object {
-        private const val BASE_URL = "https://dc73-2001-448a-10e8-354b-3524-1b2d-8385-73fd.ngrok-free.app/"
+class ApiConfigFindkes {
 
-        fun getApiModel(): ApiServiceModelML {
+    companion object {
+        private const val BASE_URL = "https://maps.googleapis.com/maps/api/"
+
+        fun getApiMapFindkes(): ApiServiceFindkes {
             val loggingInterceptor = HttpLoggingInterceptor().apply {
                 level = if (BuildConfig.DEBUG) {
                     HttpLoggingInterceptor.Level.BODY
@@ -19,17 +21,18 @@ class ApiConfigModelML {
                 }
             }
 
-            val client = OkHttpClient.Builder()
+            val okHttpClient = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
                 .build()
 
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(client)
+                .client(okHttpClient)
                 .build()
 
-            return retrofit.create(ApiServiceModelML::class.java)
+            return retrofit.create(ApiServiceFindkes::class.java)
         }
     }
+
 }

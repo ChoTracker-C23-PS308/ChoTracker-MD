@@ -47,26 +47,4 @@ object ChotrackCamPermission {
         }
     }
 
-
-    fun checkForCameraWritePermissions(fragment: Fragment, permissionCall: PermissionCallback) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            permissionCall.onPermission(true)
-        } else {
-            val permissionsNeeded = ArrayList<String>()
-            val permissionsList = ArrayList<String>()
-            if (!addPermission(permissionsList, Manifest.permission.CAMERA, fragment.requireActivity()))
-                permissionsNeeded.add("CAMERA")
-            if (!addPermission(permissionsList, Manifest.permission.READ_EXTERNAL_STORAGE, fragment.requireActivity()))
-                permissionsNeeded.add("READ_EXTERNAL_STORAGE")
-            if (permissionsList.size > 0) {
-                fragment.requestPermissions(
-                    permissionsList.toTypedArray(),
-                    REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS
-                )
-            } else {
-                permissionCall.onPermission(true)
-            }
-        }
-    }
-
 }

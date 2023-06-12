@@ -16,6 +16,7 @@ import com.capstone.chotracker.chotrack_cam.ChotrackCamOptions
 import com.capstone.chotracker.databinding.ActivityMainBinding
 import com.capstone.chotracker.ui.chochat.ChoChatLandingPageFragment
 import com.capstone.chotracker.ui.chotrack.ChotrackActivity
+import com.capstone.chotracker.ui.findkes.FindkesFragment
 import com.capstone.chotracker.ui.home.HomeFragment
 import com.capstone.chotracker.ui.profile.ProfileFragment
 
@@ -88,8 +89,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home_nav -> replaceFragment(HomeFragment())
                 R.id.chochat_nav -> replaceFragment(ChoChatLandingPageFragment())
                 R.id.profil_nav -> replaceFragment(ProfileFragment())
-
-                else -> {}
+                R.id.findkes_nav -> replaceFragment(FindkesFragment())
             }
             true
         }
