@@ -1,5 +1,6 @@
 package com.capstone.chotracker.ui.main
 
+import ProfileFragment
 import android.app.Activity
 import android.content.Intent
 import android.os.Build
@@ -18,7 +19,7 @@ import com.capstone.chotracker.ui.chochat.ChoChatLandingPageFragment
 import com.capstone.chotracker.ui.chotrack.ChotrackActivity
 import com.capstone.chotracker.ui.findkes.FindkesFragment
 import com.capstone.chotracker.ui.home.HomeFragment
-import com.capstone.chotracker.ui.profile.ProfileFragment
+
 
 class MainActivity : AppCompatActivity() {
 
