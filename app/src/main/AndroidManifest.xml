@@ -29,6 +29,12 @@
             android:value="${FINDKES_MAP_API_KEY}" />
 
         <activity
+            android:name=".ui.article.DetailArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.article.ArticleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.history.HistoryActivity"
             android:exported="false" />
         <activity

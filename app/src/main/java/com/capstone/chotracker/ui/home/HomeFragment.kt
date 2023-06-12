@@ -6,9 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.capstone.chotracker.R
 import com.capstone.chotracker.databinding.FragmentHomeBinding
-import com.capstone.chotracker.ui.article.ArticleFragment
+import com.capstone.chotracker.ui.article.ArticleActivity
 import com.capstone.chotracker.ui.history.HistoryActivity
 
 
@@ -33,17 +32,8 @@ class HomeFragment : Fragment() {
         seeAllHistory()
 
         binding.seeArticle.setOnClickListener {
-            val categoryFragment = ArticleFragment()
-            val fragmentManager = parentFragmentManager
-            fragmentManager.beginTransaction().apply {
-                replace(
-                    R.id.container_home,
-                    categoryFragment,
-                    ArticleFragment::class.java.simpleName
-                )
-                addToBackStack(null)
-                commit()
-            }
+            val intent = Intent(requireContext(), ArticleActivity::class.java)
+            startActivity(intent)
         }
     }
 
