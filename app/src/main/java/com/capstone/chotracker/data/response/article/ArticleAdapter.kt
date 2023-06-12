@@ -1,7 +1,10 @@
 import android.view.LayoutInflater
+import android.view.RoundedCorner
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.capstone.chotracker.data.response.article.DataItem
 
 import com.capstone.chotracker.databinding.ItemListArticleBinding
@@ -27,6 +30,8 @@ class ArticleAdapter(private val articleList: List<DataItem>) : RecyclerView.Ada
         val (_,_,title, desc,_,imageUrl, createAt) = articleList[position]
         Glide.with(holder.itemView.context)
             .load(imageUrl)
+            .transform(RoundedCorners(10))
+            .transition(DrawableTransitionOptions.withCrossFade())
             .into(holder.binding.ivItemPhoto)
         holder.binding.tvTitlle.text = title
         holder.binding.Desc.text = desc
@@ -37,7 +42,7 @@ class ArticleAdapter(private val articleList: List<DataItem>) : RecyclerView.Ada
 
         val apiData : String? = desc
         val startIndex = 0
-        val endIndex = 120
+        val endIndex = 206
         val result = StringUtils.cutStringFromAPI(apiData, startIndex, endIndex)
         holder.binding.Desc.text = result
     }
