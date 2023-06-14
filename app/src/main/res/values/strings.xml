@@ -158,6 +158,8 @@ consult with us</string>
     <string name="nearby_medical_facility">Fasilitas Kesehatan\ndi Sekitar Anda</string>
     <string name="hospital_name_template">Rumah Sakit Template</string>
     <string name="hospital_location_template">Jl. Gajah Mada</string>
+    <string name="update_profile_success">Update Profile Successfully!</string>
+    <string name="failed_load_profile">Failed to load profile.</string>
 
     <string-array name="data_title">
         <item>Ketahui Makanan untuk menjaga kesehatan Tubuhmu</item>

@@ -23,7 +23,7 @@
         android:theme="@style/Theme.ChoTracker"
         tools:targetApi="31">
         <activity
-            android:name=".DetailProfileActivity"
+            android:name=".ui.profile.profile_detail.ProfileDetailActivity"
             android:exported="false" />
 
         <meta-data

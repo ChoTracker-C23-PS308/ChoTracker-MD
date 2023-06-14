@@ -2,6 +2,9 @@ package com.capstone.chotracker.utils
 
 import android.app.Activity
 import android.content.Context
+import android.database.Cursor
+import android.net.Uri
+import android.provider.MediaStore
 import android.text.TextUtils
 import android.util.DisplayMetrics
 import android.util.Patterns
@@ -9,6 +12,7 @@ import android.view.View
 import android.view.WindowManager
 import com.capstone.chotracker.R
 import com.capstone.chotracker.databinding.ActivityChotrackCamBinding
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -100,4 +104,39 @@ fun convertPixelsToDp(px: Float, context: Context): Float {
     val resources = context.resources
     val metrics = resources.displayMetrics
     return px / (metrics.densityDpi.toFloat() / DisplayMetrics.DENSITY_DEFAULT)
+}
+
+fun getFileFromUri(context: Context, uri: Uri): File? {
+    return try {
+        val filePath = getRealPathFromUri(context, uri)
+        if (filePath != null) {
+            File(filePath)
+        } else {
+            null
+        }
+    } catch (e: Exception) {
+        e.printStackTrace()
+        null
+    }
+}
+
+private fun getRealPathFromUri(context: Context, uri: Uri): String? {
+    var realPath: String? = null
+    val projection = arrayOf(MediaStore.Images.Media.DATA)
+    var cursor: Cursor? = null
+    try {
+        cursor = context.contentResolver.query(uri, projection, null, null, null)
+        cursor?.let {
+            val columnIndex = it.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+            if (it.moveToFirst()) {
+                realPath = it.getString(columnIndex)
+            }
+        }
+    } finally {
+        cursor?.close()
+    }
+    if (realPath == null) {
+        realPath = uri.path
+    }
+    return realPath
 }

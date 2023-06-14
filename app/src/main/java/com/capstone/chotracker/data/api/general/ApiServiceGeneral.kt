@@ -4,9 +4,7 @@ import com.capstone.chotracker.data.response.history.AddHistoryResponseModel
 import com.capstone.chotracker.data.response.history.AddImageResponseModel
 import com.capstone.chotracker.data.response.history.HistoryModel
 import com.capstone.chotracker.data.response.history.HistoryResponseModel
-import com.capstone.chotracker.data.response.profile.CreateUserResponse
-import com.capstone.chotracker.data.response.profile.ProfileUserResponse
-import com.capstone.chotracker.data.response.profile.UpdateUserResponse
+import com.capstone.chotracker.data.response.profile.*
 import okhttp3.MultipartBody
 import retrofit2.Call
 
@@ -44,28 +42,38 @@ interface ApiServiceGeneral {
     @GET("articles")
     fun getArticle(
         @Header("Authorization") token: String
-
     ) : Call<Response>
 
+    // USER
     @Headers("Content-Type: application/json; charset=UTF-8")
-    @GET("users/{id}")
-    fun getUserById(@Path("id") id: String): Call<ProfileUserResponse>
+    @GET("users/{uid}")
+    suspend fun getUserById(
+        @Header("Authorization") token: String,
+        @Path("uid") uid: String
+    ): UserProfileResponseModel
 
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("users")
-    fun createUser(@Body createUserResponse: CreateUserResponse): Call<Unit>
+    suspend fun createUser(
+        @Header("Authorization") token: String,
+        @Body user: UserModel
+    ): CreateUserResponseModel
 
     @Headers("Content-Type: application/json; charset=UTF-8")
-    @PUT("users/{id}")
-    fun updateUser(@Path("id") id: String, @Body updateUserResponse: UpdateUserResponse): Call<Unit>
+    @PUT("users/{uid}")
+    suspend fun updateUser(
+        @Header("Authorization") token: String,
+        @Path("uid") uid: String,
+        @Body user: UserModel
+    ): UpdateUserResponseModel
 
     @Multipart
     @PUT("users/{uid}/image")
-    suspend fun addImageUser(
+    suspend fun updateImageUser(
         @Header("Authorization") token: String,
         @Path("uid") uid: String,
         @Part file: MultipartBody.Part
-    ): UpdateUserResponse
+    ): UpdateUserImageResponseModel
 
 
 }

@@ -16,6 +16,7 @@ import com.capstone.chotracker.databinding.ActivityChotrackBinding
 import com.capstone.chotracker.ui.history.HistoryActivity
 import com.capstone.chotracker.ui.main.MainActivity
 import com.capstone.chotracker.utils.ResultCondition
+import com.capstone.chotracker.utils.getFileFromUri
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -60,7 +61,7 @@ class ChotrackActivity : AppCompatActivity() {
 
     private fun buttonPredictHandler() {
         binding.resultButton.setOnClickListener {
-            val imageFile = getFileFromUri(imageUri)
+            val imageFile = getFileFromUri(this, imageUri)
             val requestFile = imageFile?.asRequestBody("multipart/form-data".toMediaType())
             val imagePart = requestFile?.let {
                 MultipartBody.Part.createFormData("file", imageFile.name, it)
@@ -124,7 +125,7 @@ class ChotrackActivity : AppCompatActivity() {
 
     private fun saveResultHandler() {
         binding.saveResultButton.setOnClickListener {
-            val imageFile = getFileFromUri(imageUri)
+            val imageFile = getFileFromUri(this, imageUri)
             val requestFile = imageFile?.asRequestBody("multipart/form-data".toMediaType())
             val imagePart = requestFile?.let {
                 MultipartBody.Part.createFormData("file", imageFile.name, it)
@@ -204,41 +205,6 @@ class ChotrackActivity : AppCompatActivity() {
 
     private fun progressSaveLoading(loading: Boolean) {
         binding.progressBarSave.visibility = if (loading) View.VISIBLE else View.GONE
-    }
-
-    private fun getFileFromUri(uri: Uri): File? {
-        return try {
-            val filePath = getRealPathFromUri(uri)
-            if (filePath != null) {
-                File(filePath)
-            } else {
-                null
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
-        }
-    }
-
-    private fun getRealPathFromUri(uri: Uri): String? {
-        var realPath: String? = null
-        val projection = arrayOf(MediaStore.Images.Media.DATA)
-        var cursor: Cursor? = null
-        try {
-            cursor = contentResolver.query(uri, projection, null, null, null)
-            cursor?.let {
-                val columnIndex = it.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
-                if (it.moveToFirst()) {
-                    realPath = it.getString(columnIndex)
-                }
-            }
-        } finally {
-            cursor?.close()
-        }
-        if (realPath == null) {
-            realPath = uri.path
-        }
-        return realPath
     }
 
 

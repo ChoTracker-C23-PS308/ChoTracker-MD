@@ -1,13 +1,16 @@
+package com.capstone.chotracker.ui.profile
+
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.capstone.chotracker.data.UserPreference
 import com.capstone.chotracker.databinding.FragmentProfileBinding
 import com.capstone.chotracker.ui.on_boarding.OnBoardingActivity
+import com.capstone.chotracker.ui.profile.profile_detail.ProfileDetailActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -20,8 +23,7 @@ class ProfileFragment : Fragment() {
 
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
-
-
+    private lateinit var userPreference: UserPreference
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,11 +38,10 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
+        userPreference = UserPreference.getInstance(requireContext())
 
         binding.editProfile.setOnClickListener {
-            val intent = Intent(requireContext(), DetailProfileActivity::class.java)
+            val intent = Intent(requireContext(), ProfileDetailActivity::class.java)
             startActivity(intent)
         }
 
@@ -60,6 +61,8 @@ class ProfileFragment : Fragment() {
 
     private fun logoutButtonHandler() {
         binding.logout.setOnClickListener {
+            userPreference.namePref = null
+            userPreference.emailPref = null
             logOut()
         }
     }
