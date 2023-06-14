@@ -42,7 +42,7 @@ class ArticleAdapter(private val articleList: List<DataItem>) : RecyclerView.Ada
 
         val apiData : String? = desc
         val startIndex = 0
-        val endIndex = 206
+        val endIndex = 138
         val result = StringUtils.cutStringFromAPI(apiData, startIndex, endIndex)
         holder.binding.Desc.text = result
     }

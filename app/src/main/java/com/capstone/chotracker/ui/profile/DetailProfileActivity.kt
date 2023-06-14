@@ -6,7 +6,7 @@ import com.capstone.chotracker.R
 import com.capstone.chotracker.data.response.profile.ProfileUserResponse
 import com.capstone.chotracker.data.response.profile.UpdateUserResponse
 import com.capstone.chotracker.databinding.ActivityDetailProfileBinding
-import com.capstone.chotracker.ui.home.HomeFragment
+
 import com.google.firebase.auth.FirebaseAuth
 
 class DetailProfileActivity : AppCompatActivity() {
