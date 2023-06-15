@@ -205,8 +205,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
@@ -227,7 +225,7 @@
                 android:src="@drawable/history_image" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@id/seeArticle"
+                android:id="@+id/seeArticle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -310,18 +308,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/progressBarStyle"
+                android:gravity="center"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:visibility="visible" />
-
-
-
-
-
-
 
 
         </LinearLayout>
