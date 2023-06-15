@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChoTracker</string>
+    <string name="agree_to_terms">Dengan masuk, Anda setuju dengan <font color="#0E8388">Syarat Layanan</font> dan <font color="#0E8388">Kebijakan Privasi</font> kami.</string>
+    <string name="continue_login">Lanjutkan Login</string>
+    <string name="desc_menu_1">Merawat tubuh Anda adalah investasi yang kuat untuk diri Anda di masa depan.</string>
+    <string name="desc_menu_2">Gaya hidup sehat bukanlah tujuan jangka pendek, tetapi komitmen seumur hidup.</string>
+    <string name="desc_menu_3">Tubuh Anda adalah kuil, jaga agar tetap suci dan bersih untuk jiwa yang tinggal di dalamnya.</string>
+    <string name="desc_menu_4">Jangan menunggu penyakit datang, jadikan kesehatan Anda sebagai prioritas saat ini.</string>
+    <string name="tagline">Lacak tingkat kolesterol Anda melalui mata Anda</string>
+    <string name="name">Nama</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+    <string name="email_error">Harap masukkan email yang valid</string>
+    <string name="password_error">Kata sandi harus terdiri dari setidaknya 8 karakter</string>
+    <string name="login">Masuk</string>
+    <string name="signup">Daftar</string>
+    <string name="or">ATAU</string>
+    <string name="already_have_account">Sudah memiliki akun? <font color="#0E8388">Masuk.</font></string>
+    <string name="do_not_have_account">Belum memiliki akun? <font color="#0E8388">Daftar.</font></string>
+    <string name="ads_title">Upgrade ke Premium</string>
+    <string name="ads_desc">Berkonsultasilah dengan dokter profesional kami dan dapatkan harga terbaik</string>
+    <string name="choose_plan">PILIH PAKET INI</string>
+    <string name="one">1</string>
+    <string name="six">6</string>
+    <string name="twelve">12</string>
+    <string name="month">BULAN</string>
+    <string name="price1">Rp. 50.000</string>
+    <string name="price2">Rp. 250.000</string>
+    <string name="price3">Rp. 500.000</string>
+    <string name="date_template">17 Agustus 1945</string>
+    <string name="total_cholesterol">Total Kolesterol :</string>
+    <string name="cholesterol_level">Tingkat Kolesterol :</string>
+    <string name="rate_cholesterol_template">\> 240</string>
+    <string name="rate_cholesterol_level">Tinggi</string>
+
+    <string name="error_message">Ups..\nTerjadi kesalahan.</string>
+    <string name="close">TUTUP</string>
+
+    <string name="hello_blank_fragment">Halo fragmen kosong</string>
+
+    <string name="name_profile">Bintang Khadafi</string>
+    <string name="email_profile">bintang@gmail.com</string>
+    <string name="darkmode">Mode Gelap</string>
+    <string name="language">Bahasa</string>
+    <string name="term_of_service">Syarat Layanan</string>
+    <string name="help_and_support">Bantuan dan Dukungan</string>
+    <string name="about_app">Tentang Aplikasi</string>
+    <string name="rate_app">Beri Nilai Aplikasi Ini</string>
+    <string name="logout">Keluar</string>
+    <string name="seting_profile">Pengaturan</string>
+
+    <string name="home_nave">Beranda</string>
+    <string name="findkes_nav">Findkes</string>
+    <string name="chochat_nav">ChoChat</string>
+    <string name="profile_nav">Profil</string>
+    <string name="click">klik</string>
+
+    <string name="edit_detail_profile">Ubah Profil</string>
+    <string name="button_edit_profile">Ubah Foto</string>
+    <string name="name_detail_profile">Nama</string>
+    <string name="email_detail_profile">Email</string>
+    <string name="birth_detail_profile">Tanggal Lahir</string>
+    <string name="phone_number">Nomor Telepon</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="boy">Laki-laki</string>
+    <string name="girl">Perempuan</string>
+    <string name="button_update">Perbarui</string>
+
+    <string name="date_article">12 Maret 2023</string>
+    <string name="name_article">Ketahui Makanan untuk menjaga kesehatan Tubuhmu</string>
+    <string name="description_article">Anggota parlemen selama 16 kali masa jabatan, sering disebut sebagai hati nurani Kongres, adalah tokoh penting dalam gerakan hak sipil pada tahun 1960-an. Lewis baru berusia 25 tahun ketika ia yakin pasukan Alabama akan membunuhnya dalam unjuk rasa damai</string>
+    <string name="name_article2">Kenali Gejala Stroke Awal Dengan ChoTracker</string>
+    <string name="description_article2">Anggota parlemen selama 16 kali masa jabatan, sering disebut sebagai hati nurani Kongres, adalah tokoh penting dalam gerakan hak sipil pada tahun 1960-an. Lewis baru berusia 25 tahun ketika ia yakin pasukan Alabama akan membunuhnya dalam unjuk rasa damai</string>
+    <string name="article">Artikel</string>
+
+    <string name="name_detail_article">Kenali Gejala Stroke Awal Dengan ChoTracker</string>
+    <string name="description_detail_article">Anggota parlemen selama 16 kali masa jabatan, sering disebut sebagai hati nurani Kongres, adalah tokoh penting dalam gerakan hak sipil pada tahun 1960-an. Lewis baru berusia 25 tahun ketika ia yakin pasukan Alabama akan membunuhnya dalam unjuk rasa damai untuk hak suara melintasi jembatan pada 7 Maret 1965, yang sekarang dikenal sebagai "Blood</string>
+</resources>

@@ -3,9 +3,11 @@ package com.capstone.chotracker.ui.profile
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.capstone.chotracker.data.UserPreference
 import com.capstone.chotracker.databinding.FragmentProfileBinding
@@ -52,6 +54,12 @@ class ProfileFragment : Fragment() {
         )
 
         logoutButtonHandler()
+
+        val tvLanguage: ConstraintLayout = binding.language
+        tvLanguage.setOnClickListener {
+            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+
+        }
     }
 
     override fun onDestroyView() {

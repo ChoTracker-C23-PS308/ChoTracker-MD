@@ -42,3 +42,6 @@
 		@field:SerializedName("UpdatedAt")
 		val updatedAt: String
 	): Parcelable
+
+
+

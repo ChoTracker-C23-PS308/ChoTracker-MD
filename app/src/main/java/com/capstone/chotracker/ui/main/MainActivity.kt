@@ -1,5 +1,6 @@
 package com.capstone.chotracker.ui.main
 
+import HomeFragment
 import android.app.Activity
 import android.content.Intent
 import android.os.Build
@@ -20,7 +21,6 @@ import com.capstone.chotracker.databinding.ActivityMainBinding
 import com.capstone.chotracker.ui.chochat.ChochatFragment
 import com.capstone.chotracker.ui.chotrack.ChotrackActivity
 import com.capstone.chotracker.ui.findkes.FindkesFragment
-import com.capstone.chotracker.ui.home.HomeFragment
 import com.capstone.chotracker.ui.login.LoginViewModel
 import com.capstone.chotracker.ui.profile.ProfileFragment
 import com.capstone.chotracker.utils.ResultCondition
@@ -29,6 +29,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -137,7 +138,7 @@ class MainActivity : AppCompatActivity() {
 
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE_PICKER){
             val mImageList = data?.getStringArrayListExtra(PICKED_MEDIA_LIST) as ArrayList<String>
-            val selectedImagePath = mImageList[0] // Ambil path gambar pertama
+            val selectedImagePath = mImageList[0]
 
             val intent = Intent(this, ChotrackActivity::class.java)
             intent.putExtra(EXTRA_IMAGE, selectedImagePath)

@@ -2,6 +2,7 @@ package com.capstone.chotracker.ui.article
 
 import ArticleAdapter
 import ArticleViewModel
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
