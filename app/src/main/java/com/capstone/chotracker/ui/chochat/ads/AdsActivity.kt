@@ -1,4 +1,4 @@
-package com.capstone.chotracker.ui.ads
+package com.capstone.chotracker.ui.chochat.ads
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity

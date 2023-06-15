@@ -42,7 +42,7 @@
     <string name="name_profile">Bintang Khadafi</string>
     <string name="email_profile">bintang@gmail.com</string>
     <string name="darkmode">Dark Mode</string>
-    <string name="language">language</string>
+    <string name="language">Language</string>
     <string name="term_of_service">Term of Service</string>
     <string name="help_and_support">Help and Support</string>
     <string name="about_app">About App</string>
@@ -108,8 +108,9 @@ Lewis suffered a fractured skull and was one of dozens of nonviolent protesters 
     <string name="lats_see">12:00 PM</string>
     <string name="find_doctor">Find Doctor</string>
     <string name="choose_doctor">Choose your doctor</string>
-    <string name="doctor1">Bintang Khadafi</string>
-    <string name="doctor2">Fadila Rahim</string>
+    <string name="doctor1">dr. Alif Toriq</string>
+    <string name="doctor2">dr. Fadilla Rahim</string>
+    <string name="doctor3">dr. Iga Yusdisti</string>
     <string name="premium_card_upgrade">Upgrade to </string>
     <string name="premium_card">Upgrade to
 <font color="#FFD700">PREMIUM</font> and
@@ -169,5 +170,6 @@ consult with us</string>
         <item>The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march</item>
     </string-array>
 
+    <string name="hint_chochat_typing">Type hello to start..</string>
 
 </resources>

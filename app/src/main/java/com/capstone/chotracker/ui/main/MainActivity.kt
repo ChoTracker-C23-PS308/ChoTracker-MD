@@ -17,7 +17,7 @@ import com.capstone.chotracker.chotrack_cam.ChotrackCamActivity.Companion.REQUES
 import com.capstone.chotracker.chotrack_cam.ChotrackCamOptions
 import com.capstone.chotracker.data.UserPreference
 import com.capstone.chotracker.databinding.ActivityMainBinding
-import com.capstone.chotracker.ui.chochat.ChoChatLandingPageFragment
+import com.capstone.chotracker.ui.chochat.ChochatFragment
 import com.capstone.chotracker.ui.chotrack.ChotrackActivity
 import com.capstone.chotracker.ui.findkes.FindkesFragment
 import com.capstone.chotracker.ui.home.HomeFragment
@@ -169,9 +169,8 @@ class MainActivity : AppCompatActivity() {
     private fun navigationHandler() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-
                 R.id.home_nav -> replaceFragment(HomeFragment())
-                R.id.chochat_nav -> replaceFragment(ChoChatLandingPageFragment())
+                R.id.chochat_nav -> replaceFragment(ChochatFragment())
                 R.id.profil_nav -> replaceFragment(ProfileFragment())
                 R.id.findkes_nav -> replaceFragment(FindkesFragment())
             }

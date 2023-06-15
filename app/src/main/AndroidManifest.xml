@@ -23,6 +23,12 @@
         android:theme="@style/Theme.ChoTracker"
         tools:targetApi="31">
         <activity
+            android:name=".ui.chochat.choose_doctor.ChooseDoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chochat.mycho_bot.MychoBotActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile.profile_detail.ProfileDetailActivity"
             android:exported="false" />
 
@@ -52,7 +58,7 @@
             android:name=".ui.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ads.AdsActivity"
+            android:name="com.capstone.chotracker.ui.chochat.ads.AdsActivity"
             android:exported="false" />
         <activity
             android:name=".ui.on_boarding.OnBoardingActivity"
