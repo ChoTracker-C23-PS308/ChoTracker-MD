@@ -77,4 +77,80 @@
 
     <string name="name_detail_article">Kenali Gejala Stroke Awal Dengan ChoTracker</string>
     <string name="description_detail_article">Anggota parlemen selama 16 kali masa jabatan, sering disebut sebagai hati nurani Kongres, adalah tokoh penting dalam gerakan hak sipil pada tahun 1960-an. Lewis baru berusia 25 tahun ketika ia yakin pasukan Alabama akan membunuhnya dalam unjuk rasa damai untuk hak suara melintasi jembatan pada 7 Maret 1965, yang sekarang dikenal sebagai "Blood</string>
+
+    <string name="description_tambahan1">Anggota parlemen selama 16 periode, yang sering disebut sebagai hati nurani Kongres, adalah seorang raksasa dalam gerakan hak-hak sipil pada tahun 1960-an. Lewis baru berusia 25 tahun ketika dia yakin bahwa polisi Alabama akan membunuhnya dalam pawai damai menuntut hak pilih di seberang jembatan pada tanggal 7 Maret 1965, yang sekarang dikenal dengan sebutan "Minggu Berdarah." Lewis mengalami patah tulang tengkorak dan menjadi salah satu dari puluhan pengunjuk rasa tanpa kekerasan yang harus dirawat di rumah sakit. Liputan berita tentang pemukulan brutal tersebut mendorong peningkatan tekanan pada Kongres untuk mengesahkan Undang-Undang Hak Pilih 1965, untuk melarang negara bagian memberlakukan undang-undang diskriminatif yang telah lama menghalangi calon pemilih kulit hitam.</string>
+    <string name="other_articles">Artikel Lainnya</string>
+    <string name="do_you_like">Kamu suka dengan artikel ini?</string>
+    <string name="cho_admin">Cho admin</string>
+    <string name="date_see_article">5 hari lalu</string>
+
+    <string name="premium">Upgrade ke <font color="#FFD700">PREMIUM</font> sekarang ! </string>
+    <string name="be_a_part">and jadilah bagian dari</string>
+    <string name="Chotracker">ChoTrack Fighter!</string>
+
+    <string name="History">Riwayat</string>
+    <string name="see_history">Lihat semua riwayat</string>
+    <string name="hi_user">Hai, Pengguna Tersayang Kami</string>
+    <string name="description_name">Semoga harimu menyenangkan!</string>
+    <string name="see_article">Lihat semua artikel</string>
+
+    <string name="consultation">Konsultasi</string>
+    <string name="myChochat">MyCho Bot</string>
+    <string name="cho_description">Hai, ada yang bisa kubantu?</string>
+    <string name="lats_see">12:00 PM</string>
+    <string name="find_doctor">Temukan Dokter</string>
+    <string name="choose_doctor">Pilih doktermu</string>
+    <string name="doctor1">dr. Alif Toriq</string>
+    <string name="doctor2">dr. Fadilla Rahim</string>
+    <string name="doctor3">dr. Iga Yusdisti</string>
+    <string name="premium_card_upgrade">Upgrade ke </string>
+    <string name="premium_card">Upgrade ke\n<font color="#FFD700">PREMIUM</font> dan\nkonsultasi bersama kami</string>
+    <string name="upgrade_now">upgrade</string>
+
+    <string name="chat_with_expert">Chat dengan ahli</string>
+    <string name="choose_a_doctor">Pilih doktermu</string>
+    <string name="doctor_stepany">dr. Stepany</string>
+    <string name="doctor_robert">dr. Robert</string>
+    <string name="description_doctor">General Pulmonologist</string>
+    <string name="chat">Chat</string>
+
+    <string name="confirm_password_not_match">Konfirmasi password tidak sesuai!</string>
+    <string name="make_sure_all_data">Pastikan semua data telah terisi!</string>
+    <string name="signup_success">Sign Up Akun Berhasil!\nSilakan cek email atau spam dan verifikasi akunmu.</string>
+    <string name="email_has_been_used_error">Email telah digunakan!\nSilakan gunakan email yang lain.</string>
+    <string name="wrong_email_password">Login gagal!\nPastikan email atau password sudah benar.</string>
+    <string name="email_verification_error">Tolong verifikasi akunmu terlebih dahulu!</string>
+
+    <string name="picker_bottom_message">Tap untuk foto</string>
+    <string name="recent">Terbaru</string>
+    <string name="last_month">Sebulan terakhir</string>
+    <string name="last_week">Seminggu terakhir</string>
+
+    <string name="tap_to_select">Tap untuk memilih</string>
+    <string name="images_selected">%s Terpilih</string>
+    <string name="str_ok">OK</string>
+
+    <string name="result">Hasil</string>
+    <string name="save_result">Simpan Hasil</string>
+    <string name="result_total_cholesterol">100</string>
+    <string name="result_cholesterol_level">Normal</string>
+    <string name="back">Kembali</string>
+    <string name="detail_title">%1$s\'s artikel</string>
+
+    <string name="no_data">TIDAK ADA DATA</string>
+    <string name="title">Judul</string>
+    <string name="desc">Deskripsi</string>
+    <string name="save_result_success">Berhasil menyimpan hasil!</string>
+    <string name="error_get_token">Server Internal Error.\nSilakan coba lagi nanti.</string>
+    <string name="history">Riwayat Hasil</string>
+    <string name="decss">TextView</string>
+
+    <string name="nearby_medical_facility">Fasilitas Kesehatan\ndi Sekitar Anda</string>
+    <string name="hospital_name_template">Rumah Sakit Template</string>
+    <string name="hospital_location_template">Jl. Gajah Mada</string>
+    <string name="update_profile_success">Update Profil Berhasil!</string>
+    <string name="failed_load_profile">Gagal memuat halaman profil.</string>
+
+    <string name="hint_chochat_typing">Ketik hai untuk memulai..</string>
+
 </resources>

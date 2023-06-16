@@ -7,6 +7,7 @@
     tools:context=".ui.chochat.ads.AdsActivity">
 
     <include
+        android:id="@+id/layout_ads"
         layout="@layout/layout_ads" />
 
 

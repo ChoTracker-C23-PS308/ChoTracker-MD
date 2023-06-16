@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.chotracker.R
 import com.capstone.chotracker.custom_view.CustomPopUpAlert
-import com.capstone.chotracker.data.UserPreference
+import com.capstone.chotracker.data.preferences.UserPreference
 import com.capstone.chotracker.databinding.ActivitySignupBinding
 import com.capstone.chotracker.ui.login.LoginActivity
 import com.capstone.chotracker.utils.ResultCondition

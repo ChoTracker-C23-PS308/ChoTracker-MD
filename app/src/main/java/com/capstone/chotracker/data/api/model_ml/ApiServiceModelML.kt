@@ -9,12 +9,14 @@ import retrofit2.http.*
 
 interface ApiServiceModelML {
 
+    // CHOTRACK
     @Multipart
     @POST("api/v1/predict/regression")
     suspend fun predict(
         @Part file: MultipartBody.Part,
     ): ChotrackResponseModel
 
+    // MYCHOBOT
     @Headers("Content-Type: application/json; charset=UTF-8")
     @POST("api/v1/predict/chobot")
     suspend fun chat(

@@ -92,6 +92,7 @@
             android:layout_height="50dp"
             android:src="@drawable/image_send"
             android:layout_marginEnd="10dp"
+            android:stateListAnimator="@animator/button_press_anim"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

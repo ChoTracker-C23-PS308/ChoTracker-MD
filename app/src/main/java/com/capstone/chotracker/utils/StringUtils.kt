@@ -9,7 +9,7 @@ object StringUtils {
         return try {
             apiData.substring(startIndex, endIndex)
         } catch (e: IndexOutOfBoundsException) {
-            // Penanganan jika indeks tidak valid
+
             ""
         }
     }

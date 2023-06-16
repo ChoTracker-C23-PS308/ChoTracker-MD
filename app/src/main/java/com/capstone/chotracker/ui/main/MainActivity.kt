@@ -16,7 +16,7 @@ import com.capstone.chotracker.chotrack_cam.ChotrackCamActivity
 import com.capstone.chotracker.chotrack_cam.ChotrackCamActivity.Companion.PICKED_MEDIA_LIST
 import com.capstone.chotracker.chotrack_cam.ChotrackCamActivity.Companion.REQUEST_CODE_PICKER
 import com.capstone.chotracker.chotrack_cam.ChotrackCamOptions
-import com.capstone.chotracker.data.UserPreference
+import com.capstone.chotracker.data.preferences.UserPreference
 import com.capstone.chotracker.databinding.ActivityMainBinding
 import com.capstone.chotracker.ui.chochat.ChochatFragment
 import com.capstone.chotracker.ui.chotrack.ChotrackActivity
@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         chotrackCamButtonHandler()
         isUserAlreadyCreated()
         userAlreadyCreatedObserve()
+        userSubscribeNavigate()
     }
 
 
@@ -176,6 +177,17 @@ class MainActivity : AppCompatActivity() {
                 R.id.findkes_nav -> replaceFragment(FindkesFragment())
             }
             true
+        }
+    }
+
+    private fun userSubscribeNavigate() {
+        val navigateToChochat = intent.getBooleanExtra("navigate_to_chochat", false)
+        if (navigateToChochat) {
+            val fragment = ChochatFragment()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, fragment)
+                .addToBackStack(null)
+                .commit()
         }
     }
 

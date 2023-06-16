@@ -129,7 +129,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:padding="5dp"
-                android:textStyle="bold"
                 android:text="@string/decss"
                 app:layout_constraintStart_toStartOf="parent"
 
@@ -189,41 +188,58 @@
             app:layout_constraintVertical_bias="0.016" />
 
         <androidx.cardview.widget.CardView
-            android:layout_width="377dp"
-            android:layout_height="273dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:cardCornerRadius="10dp"
             android:layout_marginBottom="8dp"
-            app:cardCornerRadius="9dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="168dp"
-                app:srcCompat="@drawable/article1" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="170dp"
-                android:text="@string/name_article"
-                android:textColor="@color/main_green" />
+                <ImageView
+                    android:id="@+id/iv_article_plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/article2"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="190dp"
-                android:text="@string/description_article" />
+                <TextView
+                    android:id="@+id/tv_title_article_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_article"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="3dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main_green"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_article_plus"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_article"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="3dp"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_article_plus"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
 

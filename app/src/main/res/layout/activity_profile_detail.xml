@@ -146,6 +146,8 @@
                         android:layout_height="wrap_content"
                         android:alpha="1"
                         android:ems="10"
+                        android:enabled="false"
+                        android:focusable="false"
                         android:fontFamily="@font/poppins_regular"
                         android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>

@@ -64,29 +64,19 @@
     <string name="phone_number">Phone Number</string>
     <string name="gender">Gender</string>
     <string name="boy">Male</string>
-    <string name="girl">Famale</string>
+    <string name="girl">Female</string>
     <string name="button_update">Update</string>
 
     <string name="date_article">March 12,2023</string>
-    <string name="name_article">Ketahui Makanan untuk menjaga kesehatan Tubuhmu</string>
+    <string name="name_article">Avoiid these High Cholesterol Foods</string>
     <string name="description_article">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march </string>
-    <string name="name_article2">Kenali Gejala Stroke Awal
-Dengan ChoTracker</string>
+    <string name="name_article2">Kenali Gejala Stroke Awal\nDengan ChoTracker</string>
     <string name="description_article2">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march </string>
     <string name="article">Article</string>
 
-    <string name="name_detail_article">Kenali Gejala Stroke Awal
-Dengan ChoTracker</string>
-    <string name="description_detail_article">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march for voting rights across the bridge on March 7, 1965, known today as “Bloody Sunday.”
-
-Lewis suffered a fractured skull and was one of dozens of nonviolent protesters who were hospitalized. News coverage of the brutal beatings prompted increased pressure on Congress to pass the 1965 Voting Rights Act, to bar states from enforcing discriminatory laws that had long hindered prospective Black voters.
-
-And though Lewis is possibly best known for his march in Selma, he had already emerged as a leading voice in the fight for equal rights and had been arrested a number of times for the cause by that time.
-</string>
-    <string name="description_tambahan1">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march for voting rights across the bridge on March 7, 1965, known today as “Bloody Sunday.”
-
-Lewis suffered a fractured skull and was one of dozens of nonviolent protesters who were hospitalized. News coverage of the brutal beatings prompted increased pressure on Congress to pass the 1965 Voting Rights Act, to bar states from enforcing discriminatory laws that had long hindered prospective Black voters.
-</string>
+    <string name="name_detail_article">Kenali Gejala Stroke Awal\nDengan ChoTracker</string>
+    <string name="description_detail_article">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march for voting rights across the bridge on March 7, 1965, known today as “Bloody Sunday.”\nLewis suffered a fractured skull and was one of dozens of nonviolent protesters who were hospitalized. News coverage of the brutal beatings prompted increased pressure on Congress to pass the 1965 Voting Rights Act, to bar states from enforcing discriminatory laws that had long hindered prospective Black voters.\nAnd though Lewis is possibly best known for his march in Selma, he had already emerged as a leading voice in the fight for equal rights and had been arrested a number of times for the cause by that time.</string>
+    <string name="description_tambahan1">The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march for voting rights across the bridge on March 7, 1965, known today as “Bloody Sunday.”\nLewis suffered a fractured skull and was one of dozens of nonviolent protesters who were hospitalized. News coverage of the brutal beatings prompted increased pressure on Congress to pass the 1965 Voting Rights Act, to bar states from enforcing discriminatory laws that had long hindered prospective Black voters.</string>
     <string name="other_articles">Other Articles</string>
     <string name="do_you_like">Do you like it?</string>
     <string name="cho_admin">Cho admin</string>
@@ -95,10 +85,11 @@ Lewis suffered a fractured skull and was one of dozens of nonviolent protesters 
     <string name="premium">Upgrade to <font color="#FFD700">PREMIUM</font> now ! </string>
     <string name="be_a_part">and be part of</string>
     <string name="Chotracker">ChoTrack Fighter!</string>
+
     <string name="History">History</string>
     <string name="see_history">See all history</string>
-    <string name="name_komet">Hi,KOMET</string>
-    <string name="description_name">Have a great day</string>
+    <string name="hi_user">Hi, Our Beloved User</string>
+    <string name="description_name">Have a great day!</string>
     <string name="see_article">See all article</string>
 
 
@@ -112,15 +103,13 @@ Lewis suffered a fractured skull and was one of dozens of nonviolent protesters 
     <string name="doctor2">dr. Fadilla Rahim</string>
     <string name="doctor3">dr. Iga Yusdisti</string>
     <string name="premium_card_upgrade">Upgrade to </string>
-    <string name="premium_card">Upgrade to
-<font color="#FFD700">PREMIUM</font> and
-consult with us</string>
+    <string name="premium_card">Upgrade to\n<font color="#FFD700">PREMIUM</font> and\nconsult with us</string>
     <string name="upgrade_now">upgrade</string>
 
     <string name="chat_with_expert">Chat with expert</string>
     <string name="choose_a_doctor">Choose your doctor</string>
-    <string name="doctor_stepany">Doctor. Stepany</string>
-    <string name="doctor_robert">Doctor. Robert</string>
+    <string name="doctor_stepany">dr. Stepany</string>
+    <string name="doctor_robert">dr. Robert</string>
     <string name="description_doctor">General Pulmonologist</string>
     <string name="chat">Chat</string>
 
@@ -132,7 +121,6 @@ consult with us</string>
     <string name="email_verification_error">Please verify your account first!</string>
 
     <string name="picker_bottom_message">Tap for photo</string>
-
     <string name="recent">Recent</string>
     <string name="last_month">Last Month</string>
     <string name="last_week">Last Week</string>
@@ -146,7 +134,7 @@ consult with us</string>
     <string name="result_total_cholesterol">100</string>
     <string name="result_cholesterol_level">Normal</string>
     <string name="back">Back</string>
-    <string name="detail_title">%1$s\'s aticle</string>
+    <string name="detail_title">%1$s\'s article</string>
 
     <string name="no_data">NO DATA</string>
     <string name="title">Title</string>
@@ -156,8 +144,8 @@ consult with us</string>
     <string name="history">History Result</string>
     <string name="decss">TextView</string>
 
-    <string name="nearby_medical_facility">Fasilitas Kesehatan\ndi Sekitar Anda</string>
-    <string name="hospital_name_template">Rumah Sakit Template</string>
+    <string name="nearby_medical_facility">Health Facility\nAround Your Location</string>
+    <string name="hospital_name_template">Hospital Template</string>
     <string name="hospital_location_template">Jl. Gajah Mada</string>
     <string name="update_profile_success">Update Profile Successfully!</string>
     <string name="failed_load_profile">Failed to load profile.</string>
@@ -170,6 +158,6 @@ consult with us</string>
         <item>The 16-term lawmaker, often called the conscience of Congress, was a giant of the civil rights movement of the 1960s. Lewis was only 25 when he believed Alabama troopers would kill him on the peaceful march</item>
     </string-array>
 
-    <string name="hint_chochat_typing">Type hello to start..</string>
+    <string name="hint_chochat_typing">Type hai to start..</string>
 
 </resources>

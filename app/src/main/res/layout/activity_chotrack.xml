@@ -6,186 +6,197 @@
     android:layout_height="match_parent"
     tools:context=".ui.chotrack.ChotrackActivity">
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/result"
-        android:fontFamily="@font/poppins_semibold"
-        android:textSize="20sp"
-        android:letterSpacing="0.05"
-        android:textColor="@color/main_green"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_result"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_result">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <ImageView
-            android:id="@+id/iv_result"
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="20sp"
+            android:letterSpacing="0.05"
+            android:textColor="@color/main_green"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_result"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
+            android:layout_height="220dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/img_result_template" />
-    </androidx.cardview.widget.CardView>
+            app:layout_constraintTop_toBottomOf="@id/tv_result">
 
-    <ImageView
-        android:id="@+id/result_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/result_button"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_result" />
-
-    <RelativeLayout
-        android:id="@+id/layout_data_result"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_margin="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_button">
+            <ImageView
+                android:id="@+id/iv_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/img_result_template" />
+        </androidx.cardview.widget.CardView>
 
         <ImageView
+            android:id="@+id/result_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/result_button"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_result" />
+
+        <RelativeLayout
+            android:id="@+id/layout_data_result"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="10dp"
-            android:background="@drawable/custom_card_stroke" />
+            android:layout_height="300dp"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_button">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="10dp"
+                android:background="@drawable/custom_card_stroke" />
 
-            <TextView
-                android:id="@+id/label_total_cholesterol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/total_cholesterol"
-                android:textColor="@color/main_green"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ProgressBar
-                android:id="@+id/progressBar1"
-                style="?android:attr/progressBarStyle"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label_total_cholesterol"/>
+                <TextView
+                    android:id="@+id/label_total_cholesterol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/total_cholesterol"
+                    android:textColor="@color/main_green"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_total_cholesterol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/black"
-                android:textSize="50sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label_total_cholesterol"
-                tools:text="@string/result_total_cholesterol" />
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyle"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_total_cholesterol"/>
 
-            <TextView
-                android:id="@+id/label_cholesterol_level"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/cholesterol_level"
-                android:textColor="@color/main_green"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_total_cholesterol" />
+                <TextView
+                    android:id="@+id/tv_total_cholesterol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_total_cholesterol"
+                    tools:text="@string/result_total_cholesterol" />
 
-            <ProgressBar
-                android:id="@+id/progressBar2"
-                style="?android:attr/progressBarStyle"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label_cholesterol_level"/>
+                <TextView
+                    android:id="@+id/label_cholesterol_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/cholesterol_level"
+                    android:textColor="@color/main_green"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_total_cholesterol" />
 
-            <TextView
-                android:id="@+id/tv_cholesterol_level"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                tools:background="@color/green"
-                android:fontFamily="@font/poppins_regular"
-                android:paddingStart="8dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="8dp"
-                tools:text="@string/result_cholesterol_level"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label_cholesterol_level" />
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyle"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_cholesterol_level"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_cholesterol_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    tools:background="@color/green"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="8dp"
+                    tools:text="@string/result_cholesterol_level"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_cholesterol_level" />
 
-    </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.capstone.chotracker.custom_view.CustomButton
-        android:id="@+id/back_button"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/back"
-        android:textSize="16sp"
-        android:backgroundTint="@color/red"
-        android:fontFamily="@font/poppins_semibold"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/save_result_button"
-        app:layout_constraintTop_toBottomOf="@+id/layout_data_result" />
+        </RelativeLayout>
 
-    <com.capstone.chotracker.custom_view.CustomButton
-        android:id="@+id/save_result_button"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/save_result"
-        android:textSize="16sp"
-        android:backgroundTint="@color/main_green"
-        android:fontFamily="@font/poppins_semibold"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@+id/back_button"
-        app:layout_constraintTop_toBottomOf="@+id/layout_data_result" />
+        <com.capstone.chotracker.custom_view.CustomButton
+            android:id="@+id/back_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/back"
+            android:textSize="16sp"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/save_result_button"
+            app:layout_constraintTop_toBottomOf="@+id/layout_data_result" />
+
+        <com.capstone.chotracker.custom_view.CustomButton
+            android:id="@+id/save_result_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/save_result"
+            android:textSize="16sp"
+            android:backgroundTint="@color/main_green"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/back_button"
+            app:layout_constraintTop_toBottomOf="@+id/layout_data_result" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

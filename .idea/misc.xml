@@ -8,6 +8,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable-v24/bg_row_recycleview.xml" value="0.3635" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/background_alpha_dark.xml" value="0.261" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/background_circular_green.xml" value="0.211" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/baseline_image_24.xml" value="0.3275" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/bg_blur.xml" value="0.3625" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/bg_button_ads.xml" value="0.3635" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/bg_button_continue_login.xml" value="0.3625" />
@@ -32,33 +33,34 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_circle_24.xml" value="0.3635" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1935" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/ic_person.xml" value="0.3635" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/drawable/rounded_corner.xml" value="0.3495" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_ads.xml" value="0.18920765027322403" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_article.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_choose_doctor.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_chotrack.xml" value="0.14" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_chotrack_cam.xml" value="0.18" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_custom_pop_up_alert.xml" value="0.22894736842105262" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_detail_article.xml" value="0.22894736842105262" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_detail_article.xml" value="0.16" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_detail_profile.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_history.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_login.xml" value="0.11710526315789474" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_mycho_bot.xml" value="0.16" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_on_boarding.xml" value="0.11710526315789474" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_profile_detail.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_profile_detail.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_splash_screen.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/activity_temp.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.12861842105263158" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_article.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_cho_chat_landing_page.xml" value="0.22894736842105262" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_chochat.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_chochat.xml" value="0.18" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_chochat_premium.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_choose_doctor.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_detail_article.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_detail_profile.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_findkes.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/item_list_article.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/CapstoneProject/ChoTracker-MD/app/src/main/res/layout/item_row_history.xml" value="0.25" />

@@ -10,9 +10,8 @@ import retrofit2.Callback
 import retrofit2.Response as RetrofitResponse
 
 class ArticleViewModel : ViewModel() {
+
     var artcle:List<DataItem> = listOf()
-
-
 
     private val _message = MutableLiveData<String>()
     val message: LiveData<String> = _message
@@ -24,7 +23,7 @@ class ArticleViewModel : ViewModel() {
 
     fun getArticle(token: String) {
         _isLoading.value = true
-        val api =ApiConfigGeneral .getApiGeneral().getArticle("Bearer $token")
+        val api = ApiConfigGeneral.getApiGeneral().getArticle("Bearer $token")
         api.enqueue(object : retrofit2.Callback<Response> {
             override fun onResponse(call: Call<Response>, response: retrofit2.Response<Response>) {
                 _isLoading.value = false

@@ -177,6 +177,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/google_image"
+            android:stateListAnimator="@animator/button_press_anim"
             android:layout_marginEnd="120dp"
             app:layout_constraintBottom_toBottomOf="@+id/or"
             app:layout_constraintTop_toTopOf="@+id/or"

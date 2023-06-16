@@ -38,7 +38,6 @@ class ProfileDetailActivity : AppCompatActivity() {
     private lateinit var mChotrackCamOptions: ChotrackCamOptions
     private var selectedImagePath: String? = null
     private var imageUri: Uri? = null
-    private var userModel: UserModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +52,7 @@ class ProfileDetailActivity : AppCompatActivity() {
         getDataUserProfile()
         getDataUserProfileObserve()
         changePictureButtonHandler()
+        updateImageProfileObserve()
         lastEditStop()
         updateUserProfile()
         updateUserProfileObserve()
@@ -98,8 +98,8 @@ class ProfileDetailActivity : AppCompatActivity() {
                         .into(binding.ivProfilePicture)
 
 
-                    binding.rdChoiceMale.isChecked = data.Gender == "Male"
-                    binding.rdChoiceFemale.isChecked = data.Gender != "Male"
+                    binding.rdChoiceMale.isChecked = data.Gender != "Female"
+                    binding.rdChoiceFemale.isChecked = data.Gender == "Female"
 
                 }
                 is ResultCondition.ErrorState -> {
@@ -126,6 +126,7 @@ class ProfileDetailActivity : AppCompatActivity() {
             selectedImagePath = mImageList[0]
             imageUri = Uri.parse(selectedImagePath)
             binding.ivProfilePicture.setImageURI(imageUri)
+
             updateProfilePicture(imageUri)
         }
     }
@@ -192,26 +193,12 @@ class ProfileDetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateUserProfileObserve() {
+    private fun updateImageProfileObserve() {
        viewModel.updateImageState.observe(this) { resultCondition ->
            when (resultCondition) {
                is ResultCondition.LoadingState -> {}
                is ResultCondition.SuccessState -> {
                    showLoading(false)
-                   viewModel.updateUserState.observe(this) { result ->
-                       when (result) {
-                           is ResultCondition.LoadingState -> showLoading(true)
-                           is ResultCondition.SuccessState -> {
-                               showLoading(false)
-                               updateSuccess()
-                           }
-                           is ResultCondition.ErrorState -> {
-                               showLoading(false)
-                               showError()
-                           }
-                       }
-                   }
-
                }
                is ResultCondition.ErrorState -> {
                    showLoading(false)
@@ -219,6 +206,22 @@ class ProfileDetailActivity : AppCompatActivity() {
                }
            }
        }
+    }
+
+    private fun updateUserProfileObserve() {
+        viewModel.updateUserState.observe(this) { result ->
+            when (result) {
+                is ResultCondition.LoadingState -> showLoading(true)
+                is ResultCondition.SuccessState -> {
+                    showLoading(false)
+                    updateSuccess()
+                }
+                is ResultCondition.ErrorState -> {
+                    showLoading(false)
+                    showError()
+                }
+            }
+        }
     }
 
     private fun showErrorLoadProfile() {

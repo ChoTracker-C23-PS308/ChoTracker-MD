@@ -1,4 +1,4 @@
-package com.capstone.chotracker.data
+package com.capstone.chotracker.data.preferences
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -9,6 +9,7 @@ class UserPreference private constructor(context: Context) {
         private const val PREF_NAME = "UserPreference"
         private const val KEY_NAME = "name"
         private const val KEY_EMAIL = "email"
+        private const val KEY_SUBSCRIBE = "isSubscribe"
 
         @Volatile
         private var instance: UserPreference? = null
@@ -30,5 +31,9 @@ class UserPreference private constructor(context: Context) {
     var emailPref: String?
         get() = sharedPreferences.getString(KEY_EMAIL, null)
         set(value) = sharedPreferences.edit().putString(KEY_EMAIL, value).apply()
+
+    var isSubscribePref: Boolean
+        get() = sharedPreferences.getBoolean(KEY_SUBSCRIBE, false)
+        set(value) = sharedPreferences.edit().putBoolean(KEY_SUBSCRIBE, value).apply()
 
 }

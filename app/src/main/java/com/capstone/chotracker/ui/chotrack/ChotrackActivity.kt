@@ -53,6 +53,7 @@ class ChotrackActivity : AppCompatActivity() {
 
         buttonPredictHandler()
         predictObserve()
+        buttonBackHandler()
 
         saveResultHandler()
         saveResultObserve()
@@ -165,16 +166,16 @@ class ChotrackActivity : AppCompatActivity() {
                     progressSaveLoading(true)
                 }
                 is ResultCondition.SuccessState -> {
+                    progressSaveLoading(false)
                     handleSaveResult(true)
                 }
                 is ResultCondition.ErrorState -> {
+                    progressSaveLoading(false)
                     handleError(result.data)
                 }
             }
         }
     }
-
-
 
 
     private fun handleSaveResult(success: Boolean) {
@@ -205,6 +206,13 @@ class ChotrackActivity : AppCompatActivity() {
 
     private fun progressSaveLoading(loading: Boolean) {
         binding.progressBarSave.visibility = if (loading) View.VISIBLE else View.GONE
+        binding.mainLayout.visibility = if (loading) View.GONE else View.VISIBLE
+    }
+
+    private fun buttonBackHandler() {
+        binding.backButton.setOnClickListener {
+            finish()
+        }
     }
 
 

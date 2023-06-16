@@ -15,7 +15,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.chotracker.R
 import com.capstone.chotracker.custom_view.CustomPopUpAlert
-import com.capstone.chotracker.data.UserPreference
 import com.capstone.chotracker.databinding.ActivityLoginBinding
 import com.capstone.chotracker.ui.main.MainActivity
 import com.capstone.chotracker.ui.signup.SignupActivity
@@ -25,10 +24,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
 
 class LoginActivity : AppCompatActivity() {
 
